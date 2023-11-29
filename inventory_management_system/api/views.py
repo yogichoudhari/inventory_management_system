@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAdminUser,IsAuthenticated
 from rest_framework import status
 from .models import Product
 from django.contrib.auth.models import User
-from .models import User as CustomUser
+from .models import User as CustomUser,Account
 from django.contrib import auth
 from .serializers import (ProductSerializer,CustomUserSerializer,
                           LoginSerializer, UpdateCustomUserSerializer,
@@ -54,8 +54,10 @@ def register(request):
     if request.method=="POST":
         user_data = request.data
         user_instnace = request.user.extra_user_fields
+        account_instance = Account.objects.get(admin=user_instnace)
         serialized = CustomUserSerializer(data=user_data,
-                                         context={"user":user_instnace})
+                                         context={"user":user_instnace,
+                                                  "account":account_instance})
         if serialized.is_valid():
             serialized.save()
             return Response({'status':'success',

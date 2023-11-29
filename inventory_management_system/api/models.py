@@ -1,7 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User as BuiltInUser
 from django.core.exceptions import ValidationError
 from indian_cities.dj_city import cities
+from django.utils import timezone
 state_choices = (("Andhra Pradesh","Andhra Pradesh"),
                  ("Arunachal Pradesh ","Arunachal Pradesh "),
                  ("Assam","Assam"),
@@ -62,16 +63,29 @@ def phone_validator(value):
     except ValueError:
         raise ValidationError("number should be numerical")
     
+
 class User(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="extra_user_fields")
+    user = models.OneToOneField(BuiltInUser, on_delete=models.CASCADE, related_name="extra_user_fields")
     roll = models.ForeignKey(Roll,on_delete=models.CASCADE)
     phone = models.CharField(validators=[phone_validator],max_length=10,null=False)
     city = models.CharField(choices=cities,max_length=50)
     state = models.CharField(choices=state_choices, max_length=35)
-    managed_by = models.ForeignKey('self',on_delete=models.SET_NULL, related_name="created_user",null=True,default=None)
-
+    account = models.ForeignKey('Account',on_delete=models.SET_NULL,related_name='users',null=True)
     def __str__(self):
         return self.user.username
+
+class Account(models.Model):
+    admin = models.OneToOneField(User,on_delete=models.CASCADE,related_name='user_is')
+    name = models.CharField(max_length=33,null=False,blank=False)
+    logo = models.BinaryField(null=True,blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(null=True,blank=True)
+    def save(self,*args,**kwargs):
+        if self.created_at:
+            self.updated_at = timezone.now()
+        super(Account,self).save(*args,**kwargs)
+    def __str__(self):
+        return self.name
 
 class Product(models.Model):
     category = models.CharField(max_length=100,null=False,blank=False)
@@ -80,6 +94,7 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(default=0,null=False,blank=False)
     actual_price = models.PositiveIntegerField(default=99,null=False,blank=False)
     discounted_price = models.PositiveIntegerField(default=99,null=False,blank=False)
+    account = models.ForeignKey(Account,on_delete=models.CASCADE)
 
     def save(self,*args,**kwargs):
         self.category = self.category.title()

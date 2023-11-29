@@ -54,7 +54,8 @@ class CustomUserSerializer(serializers.ModelSerializer):
     user = UserSerializer()
     class Meta:
         model = CustomUser
-        fields = ["user", "phone","roll", "state", "city"]
+        fields = ["user", "phone", "roll", "state", 
+                  "city", "account"]
 
     def validate(self,data):
         state_value = data.get('state')
@@ -75,13 +76,13 @@ class CustomUserSerializer(serializers.ModelSerializer):
             user_serialize = UserSerializer(data=user_data,context={"is_admin":True})
         else:   
             user_serialize = UserSerializer(data=user_data,context={"is_admin":False})
-        manager_instance = self.context.get("user")
+        account_instance = self.context.get("account")
         if user_serialize.is_valid():
             user_instance = user_serialize.save()
             roll_obj = Roll.objects.get(name=roll_name.get('name').capitalize())
             print(roll_obj)
         custom_user , created = CustomUser.objects.get_or_create(user=user_instance,
-                                                                managed_by=manager_instance,
+                                                                account=account_instance,
                                                                  roll=roll_obj,
                                                                 **validated_data)
         return custom_user
@@ -98,19 +99,18 @@ class UpdateUserSerializer(serializers.ModelSerializer):
             instance.email = validated_data.get('email',instance.email)
             instance.save()
             return instance
-        
 
 class UpdateCustomUserSerializer(serializers.ModelSerializer):
     user = UpdateUserSerializer()
     class Meta:
         model = CustomUser
-        fields = ["id", "user", "phone", "state", "city"]
+        fields = ["id", "user", "phone", "state", "city", 'account']
 
     def update(self,instance,validated_data):
         user_data = validated_data.pop("user")
         user_id = self.context.get("user_id")
         user_instance = User.objects.get(pk=user_id)
-        user_serializer = UserSerializer(user_instance,data=user_data,partial=True)
+        user_serializer = UpdateUserSerializer(user_instance,data=user_data,partial=True)
         if user_serializer.is_valid():
             user_serializer.save()
         instance.phone = validated_data.get("phone",instance.phone)
