@@ -10,6 +10,6 @@ urlpatterns = [
     path("check_product/",views.check_product,name="check_product"),
     path("product/<int:id>/make_purchase",views.make_purchase,name="make_purchase"),
     path("add_product/",views.add_product,name="add_product"),
-    path("get_user_list/",views.get_user_list,name="get_user_list")
+    path("users/",views.users,name="users"),
 ]
 

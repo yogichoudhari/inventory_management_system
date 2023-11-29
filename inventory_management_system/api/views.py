@@ -251,12 +251,16 @@ def make_purchase(request, id):
         return Response({"status":STATUS_SUCCESS,"data":data},
                          status=status.HTTP_200_OK)
 
-@api_view(["POST"])
+@api_view(["GET"])
 @permission_classes([IsAdminUser,IsAuthenticated])
-def get_user_list(request):
-    admin = Roll.objects.get(name="Admin")
-    admins = CustomUser.objects.filter(roll=admin)
-    return Response({"status":STATUS_SUCCESS})
+def users(request):
+    import pdb
+    pdb.set_trace()
+    admin = request.user
+    admin = CustomUser.objects.get(user=admin)
+    users = CustomUser.objects.filter(managed_by=admin)
+    return Response({'status':STATUS_SUCCESS,"data":users},
+                    status=status.HTTP_200_OK)
 
 
 
