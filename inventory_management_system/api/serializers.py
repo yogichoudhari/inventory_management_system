@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import User as CustomUser
+from .models import User as CustomUser , Account
 from .models import Product, Roll, state_choices
 from indian_cities.dj_city import cities
 import re
@@ -30,7 +30,6 @@ class UserSerializer(serializers.ModelSerializer):
 
         return attrs
     
-        
     def create(self,validated_data):
         password = validated_data.get('password')
         validated_data.pop("password2",None)
@@ -100,8 +99,13 @@ class UpdateUserSerializer(serializers.ModelSerializer):
             instance.save()
             return instance
 
+class AccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Account
+        fields = ['name']
 class UpdateCustomUserSerializer(serializers.ModelSerializer):
     user = UpdateUserSerializer()
+    account = AccountSerializer()
     class Meta:
         model = CustomUser
         fields = ["id", "user", "phone", "state", "city", 'account']
