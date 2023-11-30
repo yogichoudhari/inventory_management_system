@@ -5,7 +5,7 @@ class UserAdmin(admin.ModelAdmin):
     list_display=["id", "user", "phone", "roll", "state", "city", "account"]
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['id', 'category', "brand", "title", "actual_price", "discounted_price", 'quantity', 'in_stock']
+    list_display = ['id', 'category', "brand", "title", "actual_price", "discounted_price", 'quantity', 'in_stock', 'account']
 @admin.register(Roll)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['id', 'name',]

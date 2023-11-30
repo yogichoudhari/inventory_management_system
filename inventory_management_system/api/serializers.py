@@ -4,6 +4,7 @@ from .models import User as CustomUser , Account
 from .models import Product, Roll, state_choices
 from indian_cities.dj_city import cities
 import re
+import pdb
 class UserSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(write_only=True)
     password = serializers.CharField(write_only=True)
@@ -14,7 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     def validate(self,attrs):
         username = attrs.get('username')
-        regex = "^[A-Za-z]{2,}[^_!@$%^&*()_+{}:\"><?}|][0-9]*"
+        regex = "^[A-Za-z]{2,}[0-9^_!@$%^&*()_+{}:\"><?}|][0-9]*"
         username_pattern = re.compile(regex)
         if not re.match(username_pattern,username):
             raise serializers.ValidationError("Invalid username")
@@ -43,10 +44,6 @@ class UserSerializer(serializers.ModelSerializer):
 
 class RollSerializer(serializers.Serializer):
     name = serializers.CharField()
-#     def create(self,validated_data):
-#         name = validated_data.get("name")
-#         roll_user = Roll.objects.create(name=name)
-#         return roll_user
 
 class CustomUserSerializer(serializers.ModelSerializer):
     roll = RollSerializer()
@@ -71,15 +68,14 @@ class CustomUserSerializer(serializers.ModelSerializer):
     def create(self,validated_data):
         user_data = validated_data.pop("user")
         roll_name = validated_data.pop("roll")
-        if roll_name.get("name").capitalize()=="Admin":
-            user_serialize = UserSerializer(data=user_data,context={"is_admin":True})
-        else:   
-            user_serialize = UserSerializer(data=user_data,context={"is_admin":False})
         account_instance = self.context.get("account")
+        try:
+            roll_obj = Roll.objects.get(name=roll_name.get('name').capitalize())
+        except Exception as e:
+            raise serializers.ValidationError("incorrect roll")
+        user_serialize = UserSerializer(data=user_data,context={"is_admin":False})
         if user_serialize.is_valid():
             user_instance = user_serialize.save()
-            roll_obj = Roll.objects.get(name=roll_name.get('name').capitalize())
-            print(roll_obj)
         custom_user , created = CustomUser.objects.get_or_create(user=user_instance,
                                                                 account=account_instance,
                                                                  roll=roll_obj,
@@ -91,21 +87,30 @@ class UpdateUserSerializer(serializers.ModelSerializer):
         model = User
         fields = ["id", "username", "first_name", "last_name", "email"]
 
-        def update(self,instance,validated_data):
-            instance.username = validated_data.get('username',instance.username)
-            instance.first_name = validated_data.get('first_name',instance.first_name)
-            instance.last_name = validated_data.get('last_name',instance.last_name)
-            instance.email = validated_data.get('email',instance.email)
-            instance.save()
-            return instance
+    def update(self,instance,validated_data):
+        instance.username = validated_data.get('username',instance.username)
+        instance.first_name = validated_data.get('first_name',instance.first_name)
+        instance.last_name = validated_data.get('last_name',instance.last_name)
+        instance.email = validated_data.get('email',instance.email)
+        instance.save()
+        return instance
 
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
         fields = ['name']
+
+    def create(self,validated_data):
+        admin = self.context.get('user_obj')
+        return Account.objects.create(admin=admin,**validated_data)
+
+
+
+            
+
 class UpdateCustomUserSerializer(serializers.ModelSerializer):
     user = UpdateUserSerializer()
-    account = AccountSerializer()
+    account = AccountSerializer(read_only=True)
     class Meta:
         model = CustomUser
         fields = ["id", "user", "phone", "state", "city", 'account']
@@ -123,16 +128,54 @@ class UpdateCustomUserSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
     
+class AdminUserSerializer(serializers.ModelSerializer):
+    account = AccountSerializer()
+    user = UserSerializer()
+    roll = RollSerializer()
+    class Meta:
+        model = CustomUser
+        fields = ['user', 'phone', 'roll', 'state', 'city', "account"]
+        
+    def validate(self,data):
+        state_value = data.get('state')
+        city_value = data.get('city')
+        for state,city_list in cities:
+            if state == state_value:
+                for city,_ in city_list:
+                    if city==city_value:
+                        break
+                else:
+                    raise serializers.ValidationError("please enter correct city")
+        return data
+    
+    def create(self,validated_data):
+        user_data = validated_data.pop('user')
+        roll_name = validated_data.pop('roll')
+        account_data = validated_data.pop('account')
+        user_serialize = UserSerializer(data=user_data,context={'is_admin':True})
+        roll_obj = Roll.objects.get(name=roll_name.get('name').capitalize())
+        if user_serialize.is_valid():
+            user_instance = user_serialize.save()
+        admin_user , created = CustomUser.objects.get_or_create(user=user_instance,roll=roll_obj,**validated_data)
+        account_serialize = AccountSerializer(data=account_data,context={'user_obj':admin_user})
+        if account_serialize.is_valid():
+            account_serialize.save()
+        return admin_user
+    
 
 class ProductSerializer(serializers.ModelSerializer):
     in_stock = serializers.SerializerMethodField(read_only=True)
     class Meta:
         model = Product
-        fields = '__all__'
+        exclude = ['account']
 
     def update(self, instance, validated_data):
         validated_data['quantity']+=instance.quantity
         return super().update(instance, validated_data)
+    def create(self,validated_data):
+        account_obj = self.context.get('account_obj')
+        validated_data["account"] = account_obj
+        return super().create(validated_data)
     def get_in_stock(self,obj):
         return obj.in_stock
     

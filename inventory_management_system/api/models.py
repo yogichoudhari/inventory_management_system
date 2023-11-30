@@ -75,7 +75,7 @@ class User(models.Model):
         return self.user.username
 
 class Account(models.Model):
-    admin = models.OneToOneField(User,on_delete=models.CASCADE,related_name='user_is')
+    admin = models.OneToOneField(User,on_delete=models.CASCADE,related_name='related_account')
     name = models.CharField(max_length=33,null=False,blank=False)
     logo = models.BinaryField(null=True,blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

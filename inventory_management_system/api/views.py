@@ -10,14 +10,17 @@ from .models import User as CustomUser,Account
 from django.contrib import auth
 from .serializers import (ProductSerializer,CustomUserSerializer,
                           LoginSerializer, UpdateCustomUserSerializer,
-                          CheckProductSerializer, SearchedProductListSerializer)
+                          CheckProductSerializer, SearchedProductListSerializer, 
+                          AdminUserSerializer)
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import Product, Roll, state_choices
 from indian_cities.dj_city import cities
 from django.db.models import Q
+from django.forms.models import model_to_dict
 import stripe
 from django.conf import settings
 import json
+import pdb
 
 # for views responses
 STATUS_SUCCESS = "success"
@@ -53,11 +56,18 @@ def register(request):
                         status=status.HTTP_200_OK)
     if request.method=="POST":
         user_data = request.data
-        user_instnace = request.user.extra_user_fields
-        account_instance = Account.objects.get(admin=user_instnace)
-        serialized = CustomUserSerializer(data=user_data,
-                                         context={"user":user_instnace,
-                                                  "account":account_instance})
+        roll = request.data.get('roll').get('name').capitalize()
+        if roll=='Admin' and 'account' in request.data:
+            serialized = AdminUserSerializer(data=user_data)
+        elif roll!='Admin':
+            user_instnace = request.user.extra_user_fields
+            account_instance = Account.objects.get(admin=user_instnace)
+            serialized = CustomUserSerializer(data=user_data,
+                                             context={"user":user_instnace,
+                                                      "account":account_instance})
+        else:
+            return Response({'status':STATUS_FAILED,'message':'provide the account creation info'},
+                            status=status.HTTP_400_BAD_REQUEST)
         if serialized.is_valid():
             serialized.save()
             return Response({'status':'success',
@@ -134,13 +144,15 @@ def product(request,id=None):
     or a list of all products.
     '''
     try:
+        user = CustomUser.objects.get(user=request.user)
+        account = user.related_account
         if id is not None:
-            product = Product.objects.get(pk=id)
+            product = Product.objects.get(pk=id,account=account)
             serialized= ProductSerializer(product).data
             return Response({"status":STATUS_SUCCESS,"data":serialized},
                             content_type='application/json',
                             status=status.HTTP_200_OK,)
-        products = Product.objects.all()
+        products = Product.objects.filter(account=account)
         serialized = ProductSerializer(products,many=True).data
         return Response({"status":STATUS_SUCCESS,"data":serialized},
                         content_type='application/json'
@@ -204,9 +216,13 @@ def update_stock(request):
 @api_view(["POST"])
 @permission_classes([IsAdminUser,IsAuthenticated])
 def add_product(request):
+    user = CustomUser.objects.get(user=request.user)
+    account_obj = Account.objects.get(admin=user)
+
     # many=True is used to check if we are getting list of objects to create
     serialize_product_data = ProductSerializer(data=request.data,
-                                               many=type(request.data)==list)
+                                               many=type(request.data)==list,
+                                               context={'account_obj':account_obj})
     if serialize_product_data.is_valid():
         serialize_product_data.save()
         return Response({"status":STATUS_SUCCESS,
@@ -223,8 +239,10 @@ def add_product(request):
 def make_purchase(request, id):  
     if request.method=="GET":
         product_id = id
+        user = CustomUser.objects.get(user=request.user)
+        account = user.account
         try:
-            product = Product.objects.get(pk=product_id)
+            product = Product.objects.get(pk=product_id,account=account)
         except Product.DoesNotExist:
             return Response({"status":STATUS_FAILED,
                              "message":"product not found"},
@@ -246,7 +264,7 @@ def make_purchase(request, id):
         product.quantity = product.quantity-quantity
         product.save()
         data = {"product name":product.brand +" "+product.title,
-                f"price {str(quantity) + ' Item'}": price,
+                "quantity": quantity,
                 "discount":discount,
                 "total amount":discounted_price,
                 "message":f"you have saved {discount} on this order"}
@@ -256,12 +274,11 @@ def make_purchase(request, id):
 @api_view(["GET"])
 @permission_classes([IsAdminUser,IsAuthenticated])
 def users(request):
-    import pdb
-    pdb.set_trace()
-    admin = request.user
-    admin = CustomUser.objects.get(user=admin)
-    users = CustomUser.objects.filter(managed_by=admin)
-    return Response({'status':STATUS_SUCCESS,"data":users},
+    user = CustomUser.objects.get(user=request.user)
+    account = user.related_account
+    users = CustomUser.objects.filter(account=account)
+    serialize_instances = UpdateCustomUserSerializer(users,many=True)
+    return Response({'status':STATUS_SUCCESS,"data":serialize_instances.data},
                     status=status.HTTP_200_OK)
 
 
