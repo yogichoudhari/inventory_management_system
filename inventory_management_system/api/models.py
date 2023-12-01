@@ -64,6 +64,12 @@ def phone_validator(value):
         raise ValidationError("number should be numerical")
     
 
+class Permission(models.Model):
+    name = models.CharField(max_length=100,null=False,unique=True,blank=False)
+    permission_set = models.JSONField(null=False,unique=True,blank=False)
+
+    def __str__(self):
+        return self.name
 class User(models.Model):
     user = models.OneToOneField(BuiltInUser, on_delete=models.CASCADE, related_name="extra_user_fields")
     roll = models.ForeignKey(Roll,on_delete=models.CASCADE)

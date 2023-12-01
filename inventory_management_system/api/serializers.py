@@ -159,7 +159,9 @@ class AdminUserSerializer(serializers.ModelSerializer):
         admin_user , created = CustomUser.objects.get_or_create(user=user_instance,roll=roll_obj,**validated_data)
         account_serialize = AccountSerializer(data=account_data,context={'user_obj':admin_user})
         if account_serialize.is_valid():
-            account_serialize.save()
+            account_instance = account_serialize.save()
+            admin_user.account = account_instance
+            admin_user.save()
         return admin_user
     
 

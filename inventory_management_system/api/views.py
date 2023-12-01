@@ -145,7 +145,7 @@ def product(request,id=None):
     '''
     try:
         user = CustomUser.objects.get(user=request.user)
-        account = user.related_account
+        account = user.account
         if id is not None:
             product = Product.objects.get(pk=id,account=account)
             serialized= ProductSerializer(product).data
@@ -206,7 +206,7 @@ def update_stock(request):
     if serialized.is_valid():
         serialized.save()
         return Response({"status":STATUS_SUCCESS,
-                         "message":{ "product is updated"}},
+                         "message": "product is updated"},
                         status=status.HTTP_200_OK)
     else:
         return Response({"status":STATUS_FAILED,
