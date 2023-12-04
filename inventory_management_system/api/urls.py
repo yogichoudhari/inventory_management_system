@@ -11,5 +11,6 @@ urlpatterns = [
     path("product/<int:id>/make_purchase",views.make_purchase,name="make_purchase"),
     path("add_product/",views.add_product,name="add_product"),
     path("users/",views.users,name="users"),
+    path("allow_permission/", views.grant_permission_to_user)
 ]
 

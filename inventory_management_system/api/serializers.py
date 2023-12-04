@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import User as CustomUser , Account
+from .models import User as CustomUser , Account, Permission
 from .models import Product, Roll, state_choices
 from indian_cities.dj_city import cities
 import re
@@ -103,10 +103,56 @@ class AccountSerializer(serializers.ModelSerializer):
     def create(self,validated_data):
         admin = self.context.get('user_obj')
         return Account.objects.create(admin=admin,**validated_data)
-
-
+    
 
             
+class GrantPermissionSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    name = serializers.CharField()
+    permission_set = serializers.JSONField()
+
+    def update(self,instance,validated_data):
+        instance.name = validated_data.get('name',instance.name)
+        instance.permission_set = validated_data.get('permission_set',instance.permission_set)
+        instance.save()
+        return instance
+
+    def create(self,validated_data):
+        id = validated_data.pop('id')
+        user_instance = CustomUser.objects.get(pk=id)
+        permission_name = validated_data.get('name')
+        try:
+            if permission_name == user_instance.permission.name:
+                permission_instance = user_instance.permission
+                permission_set = permission_instance.permission_set
+                permission_set.update(validated_data["permission_set"])
+                updated_permission_set = permission_set
+                update_permission_serializer = GrantPermissionSerializer(permission_instance,
+                                                                         data=updated_permission_set,
+                                                                        partial=True)
+                if update_permission_serializer.is_valid():
+                    permission_instance = update_permission_serializer.save()
+                user_instance.permission = permission_instance
+                user_instance.save()
+                return permission_instance
+        except:
+            def default_permission_dict():
+                return {
+                "can_create":False,
+                "can_update":False,
+                "can_create_or_update":False
+            }
+            permission_dict = default_permission_dict()
+            permission_dict.update(validated_data['permission_set'])
+            validated_data['permission_set'] = permission_dict
+            permission_instance = Permission.objects.create(**validated_data)
+            user_instance.permission = permission_instance
+            user_instance.save()
+            return permission_instance
+
+
+        
+
 
 class UpdateCustomUserSerializer(serializers.ModelSerializer):
     user = UpdateUserSerializer()

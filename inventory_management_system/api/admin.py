@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Product, User, Roll, Account
+from .models import Product, User, Roll, Account, Permission
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display=["id", "user", "phone", "roll", "state", "city", "account"]
+    list_display=["id", "user", "phone", "roll", "state", "city", "account", "permission"]
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['id', 'category', "brand", "title", "actual_price", "discounted_price", 'quantity', 'in_stock', 'account']
@@ -13,3 +13,7 @@ class ProductAdmin(admin.ModelAdmin):
 @admin.register(Account)
 class AccountAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'logo', 'created_at', "updated_at"]
+
+@admin.register(Permission)
+class PermissionAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'permission_set']

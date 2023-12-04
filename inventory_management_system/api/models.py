@@ -3,6 +3,7 @@ from django.contrib.auth.models import User as BuiltInUser
 from django.core.exceptions import ValidationError
 from indian_cities.dj_city import cities
 from django.utils import timezone
+import pdb
 state_choices = (("Andhra Pradesh","Andhra Pradesh"),
                  ("Arunachal Pradesh ","Arunachal Pradesh "),
                  ("Assam","Assam"),
@@ -65,11 +66,21 @@ def phone_validator(value):
     
 
 class Permission(models.Model):
-    name = models.CharField(max_length=100,null=False,unique=True,blank=False)
-    permission_set = models.JSONField(null=False,unique=True,blank=False)
-
+    permission_name_choices = [
+        ('product_related_perms',"product_related_perms")
+    ]
+    name = models.CharField(choices= permission_name_choices,max_length=100,null=False)
+    def default_permission_dict():
+        return {
+        "can_create":False,
+        "can_update":False,
+        "can_create_or_update":False
+    }
+    permission_set = models.JSONField(default=default_permission_dict,null=False,blank=False)
     def __str__(self):
-        return self.name
+        permission_set  = {k:v for k,v in self.permission_set.items() if v==True}
+        return str(permission_set)
+        
 class User(models.Model):
     user = models.OneToOneField(BuiltInUser, on_delete=models.CASCADE, related_name="extra_user_fields")
     roll = models.ForeignKey(Roll,on_delete=models.CASCADE)
@@ -77,6 +88,7 @@ class User(models.Model):
     city = models.CharField(choices=cities,max_length=50)
     state = models.CharField(choices=state_choices, max_length=35)
     account = models.ForeignKey('Account',on_delete=models.SET_NULL,related_name='users',null=True)
+    permission = models.ForeignKey(Permission,on_delete=models.SET_NULL,null=True)
     def __str__(self):
         return self.user.username
 

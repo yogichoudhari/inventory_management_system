@@ -11,7 +11,7 @@ from django.contrib import auth
 from .serializers import (ProductSerializer,CustomUserSerializer,
                           LoginSerializer, UpdateCustomUserSerializer,
                           CheckProductSerializer, SearchedProductListSerializer, 
-                          AdminUserSerializer)
+                          AdminUserSerializer, GrantPermissionSerializer)
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import Product, Roll, state_choices
 from indian_cities.dj_city import cities
@@ -103,6 +103,19 @@ def login(request):
 
     return Response({"status":STATUS_FAILED,
                      "error":serialized.errors})
+
+@api_view(['POST'])
+@permission_classes([IsAdminUser,IsAuthenticated])
+def grant_permission_to_user(request):
+    serialize_permission_data = GrantPermissionSerializer(data=request.data)
+    if serialize_permission_data.is_valid():
+        serialize_permission_data.save()
+        return Response({"status":STATUS_SUCCESS,"message":"permission granted"},
+                        status=status.HTTP_201_CREATED)
+    else:
+        return Response({"status":STATUS_FAILED,"error":serialize_permission_data.errros},
+                        status=status.HTTP_400_BAD_REQUEST)
+
 
 
 @api_view(['POST',"GET"])
