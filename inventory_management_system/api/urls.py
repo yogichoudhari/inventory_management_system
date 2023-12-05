@@ -5,12 +5,13 @@ urlpatterns = [
     path('product/<int:id>',views.product,name='product'),
     path('register/', views.register,name='register'),
     path('login/',views.login,name='login'),
-    path('update_stock/',views.update_stock,name="update_stock"),
-    path("update_user_profile/",views.update_user_profile,name="update_user_profile"),
-    path("check_product/",views.check_product,name="check_product"),
-    path("product/<int:id>/make_purchase",views.make_purchase,name="make_purchase"),
-    path("add_product/",views.add_product,name="add_product"),
+    path('update-stock/',views.update_stock,name="update_stock"),
+    path("update-user-profile/",views.update_user_profile,name="update_user_profile"),
+    path("check-product/",views.check_product,name="check_product"),
+    path("product/<int:id>/make-purchase",views.make_purchase,name="make_purchase"),
+    path("add-product/",views.add_product,name="add_product"),
     path("users/",views.users,name="users"),
-    path("allow_permission/", views.grant_permission_to_user)
+    path("grant-permission/", views.grant_permission_to_user),
+    path("create-permission-set/", views.create_permission_set),
 ]
 

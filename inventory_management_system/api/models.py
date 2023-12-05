@@ -66,20 +66,12 @@ def phone_validator(value):
     
 
 class Permission(models.Model):
-    permission_name_choices = [
-        ('product_related_perms',"product_related_perms")
-    ]
-    name = models.CharField(choices= permission_name_choices,max_length=100,null=False)
-    def default_permission_dict():
-        return {
-        "can_create":False,
-        "can_update":False,
-        "can_create_or_update":False
-    }
-    permission_set = models.JSONField(default=default_permission_dict,null=False,blank=False)
+    permission_type = models.CharField(max_length=80,null=False)
+    permission_set = models.JSONField(null=False)
+    related_to = models.CharField(null=False)
     def __str__(self):
         permission_set  = {k:v for k,v in self.permission_set.items() if v==True}
-        return str(permission_set)
+        return str(permission_set) + "_" +str(self.related_to)
         
 class User(models.Model):
     user = models.OneToOneField(BuiltInUser, on_delete=models.CASCADE, related_name="extra_user_fields")
@@ -88,7 +80,7 @@ class User(models.Model):
     city = models.CharField(choices=cities,max_length=50)
     state = models.CharField(choices=state_choices, max_length=35)
     account = models.ForeignKey('Account',on_delete=models.SET_NULL,related_name='users',null=True)
-    permission = models.ForeignKey(Permission,on_delete=models.SET_NULL,null=True)
+    permission = models.ManyToManyField(Permission)
     def __str__(self):
         return self.user.username
 

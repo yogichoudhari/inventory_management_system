@@ -14,20 +14,20 @@ class UserSerializer(serializers.ModelSerializer):
                   "first_name", "last_name", "email"]
 
     def validate(self,attrs):
-        username = attrs.get('username')
-        regex = "^[A-Za-z]{2,}[0-9^_!@$%^&*()_+{}:\"><?}|][0-9]*"
-        username_pattern = re.compile(regex)
-        if not re.match(username_pattern,username):
-            raise serializers.ValidationError("Invalid username")
+        # username = attrs.get('username')
+        # regex = "^[A-Za-z]{2,}[0-9^_!@$%^&*()_+{}:\"><?}|][0-9]*"
+        # username_pattern = re.compile(regex)
+        # if not re.match(username_pattern,username):
+        #     raise serializers.ValidationError("Invalid username")
         password = attrs.get('password')
         password2 = attrs.get('password2')
 
         if password!=password2:
             raise serializers.ValidationError('password does not match')
-        regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{6,20}$"
-        password_pattern = re.compile(regex)
-        if not re.match(password_pattern,password):
-            raise serializers.ValidationError("password should be 6-20 charachters alphanumerical")
+        # regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{6,20}$"
+        # password_pattern = re.compile(regex)
+        # if not re.match(password_pattern,password):
+        #     raise serializers.ValidationError("password should be 6-20 charachters alphanumerical")
 
         return attrs
     
@@ -105,55 +105,27 @@ class AccountSerializer(serializers.ModelSerializer):
         return Account.objects.create(admin=admin,**validated_data)
     
 
-            
-class GrantPermissionSerializer(serializers.Serializer):
-    id = serializers.IntegerField()
-    name = serializers.CharField()
-    permission_set = serializers.JSONField()
-
-    def update(self,instance,validated_data):
-        instance.name = validated_data.get('name',instance.name)
-        instance.permission_set = validated_data.get('permission_set',instance.permission_set)
-        instance.save()
-        return instance
-
+class PermissionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Permission
+        fields = "__all__" 
+    
     def create(self,validated_data):
-        id = validated_data.pop('id')
-        user_instance = CustomUser.objects.get(pk=id)
-        permission_name = validated_data.get('name')
-        try:
-            if permission_name == user_instance.permission.name:
-                permission_instance = user_instance.permission
-                permission_set = permission_instance.permission_set
-                permission_set.update(validated_data["permission_set"])
-                updated_permission_set = permission_set
-                update_permission_serializer = GrantPermissionSerializer(permission_instance,
-                                                                         data=updated_permission_set,
-                                                                        partial=True)
-                if update_permission_serializer.is_valid():
-                    permission_instance = update_permission_serializer.save()
-                user_instance.permission = permission_instance
-                user_instance.save()
-                return permission_instance
-        except:
-            def default_permission_dict():
-                return {
-                "can_create":False,
-                "can_update":False,
-                "can_create_or_update":False
-            }
-            permission_dict = default_permission_dict()
-            permission_dict.update(validated_data['permission_set'])
-            validated_data['permission_set'] = permission_dict
-            permission_instance = Permission.objects.create(**validated_data)
-            user_instance.permission = permission_instance
-            user_instance.save()
-            return permission_instance
-
-
-        
-
-
+        permission_dict_keys = ['can_create','can_update','can_delete'] 
+        for k in validated_data['permission_set'].keys():
+            if k not in permission_dict_keys:
+                raise serializers.ValidationError("invalid permission set")
+        def permission_dict_format():
+            return  {
+            'can_create':False,
+            'can_update':False,
+            'can_delete':False
+        }
+        permission_dict = permission_dict_format()
+        permission_dict.update(validated_data['permission_set'])
+        validated_data['permission_set'] = permission_dict
+        return super().create(validated_data)
+    
 class UpdateCustomUserSerializer(serializers.ModelSerializer):
     user = UpdateUserSerializer()
     account = AccountSerializer(read_only=True)

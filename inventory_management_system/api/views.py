@@ -6,12 +6,12 @@ from rest_framework.permissions import IsAdminUser,IsAuthenticated
 from rest_framework import status
 from .models import Product
 from django.contrib.auth.models import User
-from .models import User as CustomUser,Account
+from .models import User as CustomUser,Account, Permission
 from django.contrib import auth
 from .serializers import (ProductSerializer,CustomUserSerializer,
                           LoginSerializer, UpdateCustomUserSerializer,
                           CheckProductSerializer, SearchedProductListSerializer, 
-                          AdminUserSerializer, GrantPermissionSerializer)
+                          AdminUserSerializer,PermissionSerializer)
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import Product, Roll, state_choices
 from indian_cities.dj_city import cities
@@ -97,7 +97,7 @@ def login(request):
             auth.login(request,user)
             token = get_tokens_for_user(user)
             return Response({"status":STATUS_SUCCESS,
-                             'message':'user logger in successfully',
+                             'message':'user logged in successfully',
                              "token":token},
                             content_type='application/json')
 
@@ -107,17 +107,49 @@ def login(request):
 @api_view(['POST'])
 @permission_classes([IsAdminUser,IsAuthenticated])
 def grant_permission_to_user(request):
-    serialize_permission_data = GrantPermissionSerializer(data=request.data)
-    if serialize_permission_data.is_valid():
-        serialize_permission_data.save()
-        return Response({"status":STATUS_SUCCESS,"message":"permission granted"},
-                        status=status.HTTP_201_CREATED)
-    else:
-        return Response({"status":STATUS_FAILED,"error":serialize_permission_data.errros},
+    try:
+        permission_type = request.data.get('permission_type')
+        related_to = request.data.get('related_to')
+        user_id = request.data.get('user_id')
+        user_instance= CustomUser.objects.get(pk=user_id)
+        permissions = user_instance.permission.all()
+        if permissions:
+            for permission in permissions:
+                if permission.related_to=='Product':
+                    permission_instance=permission
+            permission_set = permission_instance.permission_set
+            permission_set.update({permission_type:True})
+            get_permission_obj = Permission.objects.get(permission_set=permission_set)
+            user_instance.permission.set([get_permission_obj])
+            user_instance.save()
+            return Response({"status":STATUS_SUCCESS,"message":"permission granted"},
+                    status=status.HTTP_201_CREATED)
+        else:
+            permission_instance = Permission.objects.get(permission_type=permission_type,related_to=related_to)
+            user_instance.permission.set([permission_instance])
+            user_instance.save()
+            return Response({"status":STATUS_SUCCESS,"message":"permission granted"},
+                    status=status.HTTP_201_CREATED)
+    except Permission.DoesNotExist:
+        return Response({"status":STATUS_FAILED,"errors":"incorrect permission type provided"},
+                        status=status.HTTP_400_BAD_REQUEST)
+    except CustomUser.DoesNotExist:
+        return Response({"status":STATUS_FAILED,"errors":"incorrect user id provided"},
                         status=status.HTTP_400_BAD_REQUEST)
 
 
-
+@api_view(["POST"])
+@permission_classes([IsAdminUser,IsAuthenticated])
+def create_permission_set(request):
+    serializer_permission = PermissionSerializer(data=request.data)
+    if serializer_permission.is_valid():
+        serializer_permission.save()
+        return Response({"status":STATUS_SUCCESS,"message":"permission set successfully created"},
+                        status=status.HTTP_201_CREATED)
+    else:
+        return Response({"status":STATUS_FAILED,"errors":serializer_permission.errors},
+                        status=status.HTTP_400_BAD_REQUEST)
+    
 @api_view(['POST',"GET"])
 @permission_classes([IsAuthenticated])
 def update_user_profile(request):
@@ -201,12 +233,25 @@ def check_product(request):
                          status=status.HTTP_404_NOT_FOUND)
 
 @api_view(["PATCH"])
-@permission_classes([IsAdminUser])
 def update_stock(request):
     '''This view function is for updating the product and can be 
     
     updated by Administrator only.
     '''
+    if not request.user.is_superuser and request.user.is_authenticated:
+        user = CustomUser.objects.get(user=request.user)
+        try:
+            permissions = user.permission.all()
+            for permission in permissions:
+                if permission.related_to=="Product":
+                    permission_instance = permission  
+            permission = permission_instance.permission_set.get('can_create')   
+        except:
+            return Response({"status":STATUS_FAILED,"error":"user do not have permission to update"},
+                            status=status.HTTP_400_BAD_REQUEST)
+        if not permission:
+            return Response({"status":STATUS_FAILED,"error":"user do not have permission to update"},
+                            status=status.HTTP_400_BAD_REQUEST)
     product_id = request.data.get('id')
     try:
         product = Product.objects.get(pk=product_id)
@@ -227,11 +272,25 @@ def update_stock(request):
                         status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(["POST"])
-@permission_classes([IsAdminUser,IsAuthenticated])
 def add_product(request):
-    user = CustomUser.objects.get(user=request.user)
-    account_obj = Account.objects.get(admin=user)
+    if not request.user.is_superuser and request.user.is_authenticated:
+        user = CustomUser.objects.get(user=request.user)
+        account_obj = user.account
+        try:
+            permissions = user.permission.all()
+            for permission in permissions:
+                if permission.related_to=="Product":
+                    permission_instance = permission
+            permission = permission_instance.permission_set.get('can_create')
+        except:
+            return Response({"status":STATUS_FAILED,"error":"user do not have permission to add product"},
+                            status=status.HTTP_400_BAD_REQUEST)
+        if not permission:
+            return Response({"status":STATUS_FAILED,"error":"user do not have permission to product"},
+                status=status.HTTP_400_BAD_REQUEST)
 
+    user = CustomUser.objects.get(user=request.user)
+    account_obj = user.account  
     # many=True is used to check if we are getting list of objects to create
     serialize_product_data = ProductSerializer(data=request.data,
                                                many=type(request.data)==list,
