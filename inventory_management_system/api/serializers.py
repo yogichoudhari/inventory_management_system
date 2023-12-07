@@ -187,14 +187,16 @@ class ProductSerializer(serializers.ModelSerializer):
     in_stock = serializers.SerializerMethodField(read_only=True)
     class Meta:
         model = Product
-        exclude = ['account']
+        exclude = ['account','created_by']
 
     def update(self, instance, validated_data):
         validated_data['quantity']+=instance.quantity
         return super().update(instance, validated_data)
     def create(self,validated_data):
-        account_obj = self.context.get('account_obj')
-        validated_data["account"] = account_obj
+        user_instance = self.context.get('user_instance')
+        acccount_instance = user_instance.account
+        validated_data["account"] = acccount_instance
+        validated_data["created_by"] = user_instance
         return super().create(validated_data)
     def get_in_stock(self,obj):
         return obj.in_stock

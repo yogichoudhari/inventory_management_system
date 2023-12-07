@@ -122,8 +122,8 @@ USE_TZ = True
 
 #  stripe payment keys
 
-STRIPE_SECRET_KEY = 'sk_test_51OFKyHSCy3EZVvJQM3ZewhLIwrQ5vWeVsk8MB2Pp08BR3HbiNCO9r800eotSNUxTvQxGWfkzUxjNB6rXBEe2Eteq00Z9Gwyzhr'
-STRIPE_PUBLISHABLE_KEY = "pk_test_51OFKyHSCy3EZVvJQNvFGg8lkWPKkZxJvh20F9dpNJkC4dZGhYWnKeSM8W0flAT7JVP7gYXM9qt5zYm6wvX0ghXhd003k2wm43i"
+STRIPE_SECRET_KEY = config("STRIPE_SECRET_KEY")
+STRIPE_PUBLISHABLE_KEY = config("STRIPE_PUBLISHABLE_KEY")
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

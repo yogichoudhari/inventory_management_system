@@ -13,5 +13,7 @@ urlpatterns = [
     path("users/",views.users,name="users"),
     path("grant-permission/", views.grant_permission_to_user),
     path("create-permission-set/", views.create_permission_set),
+    path("payment-success/",views.payment_success),
+    path("payment-failed/",views.payment_failed),
 ]
 

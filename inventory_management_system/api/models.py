@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User as BuiltInUser
 from django.core.exceptions import ValidationError
 from indian_cities.dj_city import cities
+from django.dispatch import receiver
+from django.db.models.signals import post_delete
 from django.utils import timezone
 import pdb
 state_choices = (("Andhra Pradesh","Andhra Pradesh"),
@@ -66,7 +68,7 @@ def phone_validator(value):
     
 
 class Permission(models.Model):
-    permission_type = models.CharField(max_length=80,null=False)
+    permission_name = models.CharField(max_length=80,null=False)
     permission_set = models.JSONField(null=False)
     related_to = models.CharField(null=False)
     def __str__(self):
@@ -81,9 +83,13 @@ class User(models.Model):
     state = models.CharField(choices=state_choices, max_length=35)
     account = models.ForeignKey('Account',on_delete=models.SET_NULL,related_name='users',null=True)
     permission = models.ManyToManyField(Permission)
+    stripe_id = models.CharField(max_length=55)
     def __str__(self):
         return self.user.username
 
+@receiver(post_delete,sender=User)
+def delete_builtin_user(sender,instance,**kwargs):
+    instance.user.delete()
 class Account(models.Model):
     admin = models.OneToOneField(User,on_delete=models.CASCADE,related_name='related_account')
     name = models.CharField(max_length=33,null=False,blank=False)
@@ -105,6 +111,7 @@ class Product(models.Model):
     actual_price = models.PositiveIntegerField(default=99,null=False,blank=False)
     discounted_price = models.PositiveIntegerField(default=99,null=False,blank=False)
     account = models.ForeignKey(Account,on_delete=models.CASCADE)
+    created_by = models.ForeignKey(User,on_delete=models.CASCADE,null=False)
 
     def save(self,*args,**kwargs):
         self.category = self.category.title()

@@ -2,14 +2,14 @@ from django.contrib import admin
 from .models import Product, User, Roll, Account, Permission
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display=["id", "user", "phone", "roll", "state", "city", "account", "display_permissions"]
+    list_display=["id", "user", "phone", "roll", "state", "city", "account", "display_permissions","stripe_id"]
     def display_permissions(self, obj):
-        return ', '.join([permission.permission_type+"_"+permission.related_to for permission in obj.permission.all()])
+        return ', '.join([permission.permission_name+"_"+permission.related_to.lower() for permission in obj.permission.all()])
     
     display_permissions.short_description = 'Permissions'
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['id', 'category', "brand", "title", "actual_price", "discounted_price", 'quantity', 'in_stock', 'account']
+    list_display = ['id', 'category', "brand", "title", "actual_price", "discounted_price", 'quantity', 'in_stock', 'account', 'created_by']
 @admin.register(Roll)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['id', 'name',]
@@ -20,4 +20,4 @@ class AccountAdmin(admin.ModelAdmin):
 
 @admin.register(Permission)
 class PermissionAdmin(admin.ModelAdmin):
-    list_display = ['id', "permission_type", 'permission_set', 'related_to']
+    list_display = ['id', "permission_name", 'permission_set', 'related_to']

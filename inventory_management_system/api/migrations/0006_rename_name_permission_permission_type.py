@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.RenameField(
             model_name='permission',
             old_name='name',
-            new_name='permission_type',
+            new_name='permission_name',
         ),
     ]
