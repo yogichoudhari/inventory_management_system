@@ -118,8 +118,15 @@ USE_I18N = True
 
 USE_TZ = True
 
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
 
-
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://localhost:6379/1",
+    }
+}
 #  stripe payment keys
 
 STRIPE_SECRET_KEY = config("STRIPE_SECRET_KEY")

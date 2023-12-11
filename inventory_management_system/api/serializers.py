@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import User as CustomUser , Account, Permission
+from .models import User as CustomUser , Account, Permission, PaymentLog
 from .models import Product, Roll, state_choices
 from indian_cities.dj_city import cities
 import re
@@ -181,13 +181,12 @@ class AdminUserSerializer(serializers.ModelSerializer):
             admin_user.account = account_instance
             admin_user.save()
         return admin_user
-    
 
 class ProductSerializer(serializers.ModelSerializer):
     in_stock = serializers.SerializerMethodField(read_only=True)
     class Meta:
         model = Product
-        exclude = ['account','created_by']
+        exclude = ['account']
 
     def update(self, instance, validated_data):
         validated_data['quantity']+=instance.quantity
@@ -225,3 +224,7 @@ class LoginSerializer(serializers.Serializer):
         return attrs
         
     
+class PaymentLogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PaymentLog
+        fields = ['id', "amount", "customer_stripe_id", "status"]

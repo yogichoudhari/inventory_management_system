@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, User, Roll, Account, Permission
+from .models import Product, User, Roll, Account, Permission, PaymentLog
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
     list_display=["id", "user", "phone", "roll", "state", "city", "account", "display_permissions","stripe_id"]
@@ -21,3 +21,7 @@ class AccountAdmin(admin.ModelAdmin):
 @admin.register(Permission)
 class PermissionAdmin(admin.ModelAdmin):
     list_display = ['id', "permission_name", 'permission_set', 'related_to']
+
+@admin.register(PaymentLog)
+class PaymentLogAdmin(admin.ModelAdmin):
+    list_display = ['id','amount','status','user','customer_stripe_id','created_at']

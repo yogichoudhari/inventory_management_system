@@ -83,7 +83,7 @@ class User(models.Model):
     state = models.CharField(choices=state_choices, max_length=35)
     account = models.ForeignKey('Account',on_delete=models.SET_NULL,related_name='users',null=True)
     permission = models.ManyToManyField(Permission)
-    stripe_id = models.CharField(max_length=55)
+    stripe_id = models.CharField(max_length=55,null=True)
     def __str__(self):
         return self.user.username
 
@@ -128,3 +128,14 @@ class Product(models.Model):
         else:
             return "out of stock"
 
+
+class PaymentLog(models.Model):
+    amount = models.PositiveIntegerField()
+    customer_stripe_id = models.CharField(max_length=200)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    payment_status_choices = [
+        ('success','success'),
+        ('failed', 'failed')
+    ]
+    status = models.CharField(choices=payment_status_choices)
+    created_at = models.DateTimeField(auto_now_add=True)

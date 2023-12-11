@@ -6,22 +6,25 @@ from rest_framework.permissions import IsAdminUser,IsAuthenticated
 from rest_framework import status
 from .models import Product
 from django.contrib.auth.models import User
-from .models import User as CustomUser,Account, Permission
+from .models import User as CustomUser,Account, Permission, PaymentLog
 from django.contrib import auth
 from .serializers import (ProductSerializer,CustomUserSerializer,
                           LoginSerializer, UpdateCustomUserSerializer,
                           CheckProductSerializer, SearchedProductListSerializer, 
-                          AdminUserSerializer,PermissionSerializer)
+                          AdminUserSerializer,PermissionSerializer, PaymentLogSerializer)
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import Product, Roll, state_choices
 from indian_cities.dj_city import cities
 from django.db.models import Q
+from django.forms.models import model_to_dict
 import stripe
 from django.conf import settings
 import json
 import pdb
 from decouple import config
 from django.conf import settings
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 # for views responses
 STATUS_SUCCESS = "success"
 STATUS_FAILED = "failed"  
@@ -200,6 +203,7 @@ def update_user_profile(request):
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
+@cache_page(120)
 def product(request,id=None):
     '''Retrieve a single product if id is not None 
     or a list of all products.
@@ -335,6 +339,7 @@ def make_purchase(request, id):
     if request.method=="GET":   
         product_id = id
         user = CustomUser.objects.get(user=request.user)
+        user_id = user.id
         account = user.account
         try:
             product = Product.objects.get(pk=product_id,account=account)
@@ -356,9 +361,8 @@ def make_purchase(request, id):
         price = product.actual_price*quantity
         discounted_price = product.discounted_price*quantity
         discount = price-discounted_price
-        product.quantity = product.quantity-quantity
-        product.save()
         customer_stripe_id =user.stripe_id
+        user_instance_dict = model_to_dict(user)
         session = stripe.checkout.Session.create(
         line_items=[
             {"price_data":{
@@ -371,10 +375,15 @@ def make_purchase(request, id):
             },
             "quantity":quantity}
         ],
+        metadata={
+                "product_id":product_id,
+                "product_quantity":quantity,
+                "user_id":user_id
+            },
         mode="payment",
         customer=customer_stripe_id,
-        success_url="https://http://127.0.0.1:8000/admin/api/payment-success",
-        cancel_url="https://http://127.0.0.1:8000/admin/api/payment-failed"
+        success_url="http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",
+        cancel_url="http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}"
         )
         payment_url = session.url
         if session.payment_status!="unpaid":
@@ -388,18 +397,33 @@ def make_purchase(request, id):
                          status=status.HTTP_200_OK)
 
 @api_view(["GET"])
-@permission_classes([IsAuthenticated])
-def payment_success(request):
-    return Response({"status":STATUS_SUCCESS,
-                     "message":"payment is successfully done"},
+def payment_success(request,session_id):
+    session = stripe.checkout.Session.retrieve(session_id)
+    customer = stripe.Customer.retrieve(session.customer)
+    if session["payment_status"]=="paid":
+        product = Product.objects.get(pk=session.metadata.get('product_id'))
+        product.quantity = product.quantity-int(session.metadata.get("product_quantity"))
+        total_amount = session.amount_total/100
+        product.save()
+        user_instance = CustomUser.objects.get(id=session.metadata.get('user_id'))
+        PaymentLog.objects.create(amount=total_amount,customer_stripe_id=session.customer,
+                                user=user_instance,status=STATUS_SUCCESS)
+        return Response({"status":STATUS_SUCCESS,
+                     "message":f"your payment of {total_amount} is successfully done"},
                     status=status.HTTP_200_OK)
 
 @api_view(["GET"])
-@permission_classes([IsAuthenticated])
-def payment_failed(request):
-    return Response({"status":STATUS_FAILED,
-                     "message":"payment unsuccessfull"},
-                    status=status.HTTP_200_OK)
+def payment_failed(request,session_id):
+    session = stripe.checkout.Session.retrieve(session_id)
+    customer = stripe.Customer.retrieve(session.customer)
+    if session['payment_status']=="unpaid":
+        total_amount = session.amount_total/100
+        user_instance = CustomUser.objects.get(id=session.metadata.get('user_id'))
+        PaymentLog.objects.create(amount=total_amount,customer_stripe_id=session.customer,
+                                user=user_instance,status=STATUS_FAILED)
+        return Response({"status":STATUS_FAILED,
+                         "message":f"payment of {total_amount} was unsuccessfull"},
+                        status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(["GET"])
 @permission_classes([IsAdminUser,IsAuthenticated])
@@ -412,5 +436,16 @@ def users(request):
                     status=status.HTTP_200_OK)
 
 
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def payment_history(request):
+    user = CustomUser.objects.get(user=request.user)
+    payment_history_instances = PaymentLog.objects.filter(user=user)
+    serialize_payments_log = PaymentLogSerializer(payment_history_instances,
+                                                  many=True)
+    payment_history_list = serialize_payments_log.data
+    return Response({"status":STATUS_SUCCESS,"data":payment_history_list},
+                    status=status.HTTP_200_OK)
 
 
