@@ -24,6 +24,10 @@ class UserSerializer(serializers.ModelSerializer):
 
         if password!=password2:
             raise serializers.ValidationError('password does not match')
+        email = attrs.get("email")
+        user = User.objects.filter(email=email).first()
+        if user is not None:
+            raise serializers.ValidationError("email already registered")
         # regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{6,20}$"
         # password_pattern = re.compile(regex)
         # if not re.match(password_pattern,password):
@@ -51,7 +55,7 @@ class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ["user", "phone", "roll", "state", 
-                  "city", "account"]
+                  "city", "account","is_verified"]
 
     def validate(self,data):
         state_value = data.get('state')
@@ -149,11 +153,9 @@ class UpdateCustomUserSerializer(serializers.ModelSerializer):
 class AdminUserSerializer(serializers.ModelSerializer):
     account = AccountSerializer()
     user = UserSerializer()
-    roll = RollSerializer()
     class Meta:
         model = CustomUser
-        fields = ['user', 'phone', 'roll', 'state', 'city', "account"]
-        
+        fields = ['user', 'phone', 'state', 'city', "account"]
     def validate(self,data):
         state_value = data.get('state')
         city_value = data.get('city')
@@ -168,10 +170,9 @@ class AdminUserSerializer(serializers.ModelSerializer):
     
     def create(self,validated_data):
         user_data = validated_data.pop('user')
-        roll_name = validated_data.pop('roll')
         account_data = validated_data.pop('account')
         user_serialize = UserSerializer(data=user_data,context={'is_admin':True})
-        roll_obj = Roll.objects.get(name=roll_name.get('name').capitalize())
+        roll_obj = Roll.objects.get(name="Admin")
         if user_serialize.is_valid():
             user_instance = user_serialize.save()
         admin_user , created = CustomUser.objects.get_or_create(user=user_instance,roll=roll_obj,**validated_data)

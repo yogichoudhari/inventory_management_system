@@ -84,6 +84,7 @@ class User(models.Model):
     account = models.ForeignKey('Account',on_delete=models.SET_NULL,related_name='users',null=True)
     permission = models.ManyToManyField(Permission)
     stripe_id = models.CharField(max_length=55,null=True)
+    is_verified = models.BooleanField(default=False)
     def __str__(self):
         return self.user.username
 
@@ -139,3 +140,6 @@ class PaymentLog(models.Model):
     ]
     status = models.CharField(choices=payment_status_choices)
     created_at = models.DateTimeField(auto_now_add=True)
+    product = models.ForeignKey(Product,on_delete=models.SET_NULL,null=True)
+
+

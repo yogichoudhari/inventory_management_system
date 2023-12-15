@@ -1,0 +1,1300 @@
+2023-12-13 21:35:28,394 - 241-- Unauthorized: /api/register/
+2023-12-13 21:35:51,144 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 21:35:51,144 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 21:35:51,148 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-13 21:35:51,844 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 21:35:51,845 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 21:35:51,845 - 125-- body='{\n  "id": "cus_PBHV3SM9cPMMuY",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702483551,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "CC12BCD5",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 21:35:51,846 - 125-- link=https://dashboard.stripe.com/test/logs/req_ANfACSCSOWX0nJ message='Dashboard link for request'
+2023-12-13 21:36:17,566 - 110-- Cache keys ['547945', 'otp_53', '173609', '826902', '693536', 'otp_52']
+2023-12-13 21:36:17,569 - 110-- Cache keys ['547945', 'otp_53', '173609', '826902', '693536', 'otp_52']
+2023-12-13 21:36:17,570 - 241-- Bad Request: /api/verify/
+2023-12-13 21:37:04,286 - 110-- Cache keys ['547945', 'otp_53', '173609', '826902', '693536', 'otp_52']
+2023-12-13 21:37:04,289 - 110-- Cache keys ['547945', 'otp_53', '173609', '826902', '693536', 'otp_52']
+2023-12-13 21:37:04,291 - 241-- Bad Request: /api/verify/
+2023-12-13 21:45:22,032 - 111-- Cache keys ['otp_53', '826902', '693536']
+2023-12-13 21:45:22,035 - 111-- Cache keys ['otp_53', '826902', '693536']
+2023-12-13 21:45:22,035 - 111-- incorret key
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 111, in verify
+    user_id = cache.get(otp)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-13 21:45:22,037 - 241-- Bad Request: /api/verify/
+2023-12-13 21:46:45,165 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 21:46:45,165 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 21:46:45,167 - 292-- Resetting dropped connection: api.stripe.com
+2023-12-13 21:46:46,063 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 21:46:46,063 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 21:46:46,064 - 125-- body='{\n  "id": "cus_PBHgjsMDGp6BSv",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702484205,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "4C133A7A",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 21:46:46,064 - 125-- link=https://dashboard.stripe.com/test/logs/req_jsYvAvhH2uq4BG message='Dashboard link for request'
+2023-12-13 21:48:08,373 - 241-- Bad Request: /api/register/
+2023-12-13 21:49:27,861 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 21:49:57,087 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 21:49:57,087 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 21:49:57,091 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-13 21:49:57,783 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 21:49:57,783 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 21:49:57,784 - 125-- body='{\n  "id": "cus_PBHjc62rFSVECC",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702484397,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "3C2497B2",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 21:49:57,784 - 125-- link=https://dashboard.stripe.com/test/logs/req_MBeZaVubcKGe14 message='Dashboard link for request'
+2023-12-13 21:53:11,817 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 21:53:47,739 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 21:53:54,125 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-13 21:54:25,944 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 21:57:01,087 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 21:58:41,250 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-13 21:58:57,681 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-13 21:59:18,348 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 21:59:18,348 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 21:59:18,351 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-13 21:59:19,024 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 21:59:19,024 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 21:59:19,025 - 125-- body='{\n  "id": "cus_PBHsbPY8EVPfM0",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702484958,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "46F458A2",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 21:59:19,025 - 125-- link=https://dashboard.stripe.com/test/logs/req_8g8dklgLsjxtpW message='Dashboard link for request'
+2023-12-13 21:59:19,034 - 80-- send otp via email called once
+2023-12-13 22:00:46,381 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-13 22:02:49,086 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 22:02:49,086 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 22:02:49,090 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-13 22:02:49,686 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 22:02:49,687 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 22:02:49,687 - 125-- body='{\n  "id": "cus_PBHwkiacIeFlw3",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702485169,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "734D747A",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 22:02:49,687 - 125-- link=https://dashboard.stripe.com/test/logs/req_BLjqlaiWBEi5xD message='Dashboard link for request'
+2023-12-13 22:02:49,696 - 80-- send otp via email called once
+2023-12-13 22:04:16,538 - 112-- Cache keys ['605649', 'otp_57', '322947', 'otp_55', '198604', '865887', 'otp_56', '582406', '272265']
+2023-12-13 22:04:16,541 - 112-- Cache keys ['605649', 'otp_57', '322947', 'otp_55', '198604', '865887', 'otp_56', '582406', '272265']
+2023-12-13 22:04:16,542 - 241-- Bad Request: /api/verify/
+2023-12-13 22:08:44,757 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-13 22:10:02,130 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 22:10:02,131 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 22:10:02,141 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-13 22:10:02,736 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 22:10:02,738 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 22:10:02,739 - 125-- body='{\n  "id": "cus_PBI3jVsHt6vLXk",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702485602,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "9E5E586E",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 22:10:02,740 - 125-- link=https://dashboard.stripe.com/test/logs/req_7HHnDcumEWJnsi message='Dashboard link for request'
+2023-12-13 22:10:10,831 - 80-- send otp via email called once
+2023-12-13 22:12:46,400 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:13:48,429 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 22:13:48,430 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 22:13:48,436 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-13 22:13:49,028 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 22:13:49,029 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 22:13:49,030 - 125-- body='{\n  "id": "cus_PBI7IvcEt3iSOs",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702485828,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "C81D031B",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 22:13:49,031 - 125-- link=https://dashboard.stripe.com/test/logs/req_4IJNiQvknnG7rr message='Dashboard link for request'
+2023-12-13 22:13:55,847 - 81-- send otp via email called once
+2023-12-13 22:14:15,115 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:15:48,629 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 22:15:48,629 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 22:15:48,631 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-13 22:15:54,178 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 22:15:54,179 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 22:15:54,179 - 125-- body='{\n  "id": "cus_PBI9hM4aOi4OjL",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702485948,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "37777212",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 22:15:54,179 - 125-- link=https://dashboard.stripe.com/test/logs/req_1kbrdgpDfM0q16 message='Dashboard link for request'
+2023-12-13 22:15:54,188 - 58-- send otp via email called once
+2023-12-13 22:16:35,032 - 112-- Cache keys ['otp_59', '605649', 'otp_57', '632082', 'otp_60', '381084', 'otp_58', '726826', '582406']
+2023-12-13 22:16:35,035 - 112-- Cache keys ['otp_59', '605649', 'otp_57', '632082', 'otp_60', '381084', 'otp_58', '726826', '582406']
+2023-12-13 22:18:59,040 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 22:18:59,040 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 22:18:59,042 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-13 22:19:00,033 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 22:19:00,034 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 22:19:00,034 - 125-- body='{\n  "id": "cus_PBICq9K32yQpD3",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702486139,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "FBDC2EF3",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 22:19:00,035 - 125-- link=https://dashboard.stripe.com/test/logs/req_NuGwiRczD1v0u7 message='Dashboard link for request'
+2023-12-13 22:19:00,044 - 58-- send otp via email called once
+2023-12-13 22:19:48,533 - 112-- Cache keys ['796819', 'otp_61']
+2023-12-13 22:19:48,537 - 112-- Cache keys ['796819', 'otp_61']
+2023-12-13 22:19:48,537 - 112-- incorret key
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 112, in verify
+    otp = request.data.get('otp')
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-13 22:19:48,538 - 241-- Bad Request: /api/verify/
+2023-12-13 22:20:34,283 - 112-- Cache keys ['796819', 'otp_61']
+2023-12-13 22:20:34,287 - 112-- Cache keys ['796819', 'otp_61']
+2023-12-13 22:20:34,287 - 112-- incorret key
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 112, in verify
+    otp = request.data.get('otp')
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-13 22:20:34,288 - 241-- Bad Request: /api/verify/
+2023-12-13 22:21:04,632 - 112-- Cache keys ['796819', 'otp_61']
+2023-12-13 22:21:04,635 - 112-- Cache keys ['796819', 'otp_61']
+2023-12-13 22:21:24,270 - 112-- Cache keys ['796819']
+2023-12-13 22:21:24,273 - 112-- Cache keys ['796819']
+2023-12-13 22:21:24,274 - 241-- Bad Request: /api/verify/
+2023-12-13 22:29:07,815 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:31:13,993 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:31:22,297 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:31:49,401 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:36:26,388 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-13 22:36:31,769 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-13 22:37:37,169 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:38:42,693 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:38:47,576 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:39:57,725 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:40:15,415 - 241-- Unauthorized: /api/register/
+2023-12-13 22:40:41,433 - 241-- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: User() got unexpected keyword arguments: 'is_verified'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 58, in register
+    user_data = request.data
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py", line 79, in create
+    user_instance = user_serialize.save()
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py", line 41, in create
+    user = super().create(validated_data)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 981, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the UserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: User() got unexpected keyword arguments: 'is_verified'
+
+2023-12-13 22:42:11,801 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-13 22:42:35,378 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-13 22:43:33,667 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-13 22:44:02,309 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-13 22:44:30,096 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 22:44:30,097 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 22:44:30,098 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-13 22:44:30,625 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 22:44:30,626 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 22:44:30,626 - 125-- body='{\n  "id": "cus_PBIcVIf48ALpjD",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702487670,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "5394A4CE",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 22:44:30,627 - 125-- link=https://dashboard.stripe.com/test/logs/req_ZrSkXOjpNoVosg message='Dashboard link for request'
+2023-12-13 22:44:58,089 - 241-- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 154, in login
+    extra_user_fields = CustomUser.objects.get(user=user)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-13 22:45:21,475 - 241-- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 154, in login
+    extra_user_fields = CustomUser.objects.get(user=user)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-13 22:47:10,258 - 241-- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 154, in login
+    extra_user_fields = CustomUser.objects.get(user=user)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-13 22:47:52,781 - 241-- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 154, in login
+    extra_user_fields = CustomUser.objects.get(user=user)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-13 22:48:33,711 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:48:42,986 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 22:51:53,840 - 241-- Bad Request: /api/register/
+2023-12-13 22:52:29,368 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 22:52:29,368 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 22:52:29,370 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-13 22:52:29,970 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 22:52:29,971 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 22:52:29,971 - 125-- body='{\n  "id": "cus_PBIkYqm6PYjOqs",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702488149,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "8CCE67CA",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 22:52:29,971 - 125-- link=https://dashboard.stripe.com/test/logs/req_3UzdfXfI7nhWcY message='Dashboard link for request'
+2023-12-13 22:53:14,562 - 241-- Unauthorized: /api/verify/
+2023-12-13 22:53:36,204 - 115-- Cache keys ['642689', 'otp_63']
+2023-12-13 22:53:36,208 - 115-- Cache keys ['642689', 'otp_63']
+2023-12-13 22:53:36,208 - 115-- incorret key
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 115, in verify
+    otp = request.data.get('otp')
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-13 22:53:36,210 - 241-- Bad Request: /api/verify/
+2023-12-13 22:53:47,967 - 115-- Cache keys ['642689', 'otp_63']
+2023-12-13 22:53:47,970 - 115-- Cache keys ['642689', 'otp_63']
+2023-12-13 22:54:43,434 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-13 22:54:43,434 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-13 22:54:43,435 - 292-- Resetting dropped connection: api.stripe.com
+2023-12-13 22:54:44,010 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-13 22:54:44,011 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-13 22:54:44,011 - 125-- body='{\n  "id": "cus_PBImZRZG1pWVLn",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702488283,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "96C2AF05",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-13 22:54:44,011 - 125-- link=https://dashboard.stripe.com/test/logs/req_XrTbjgtkCQGBAb message='Dashboard link for request'
+2023-12-13 22:57:49,076 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-13 23:03:33,524 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 23:03:39,321 - 241-- Forbidden: /api/login/
+2023-12-13 23:18:23,906 - 241-- Unauthorized: /api/resend-otp/
+2023-12-13 23:18:45,884 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 23:34:01,593 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 23:34:11,760 - 101-- an error occured : that email is incorrect
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 97, in resend_otp
+    auth_user = User.objects.get(email=email)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+2023-12-13 23:34:11,761 - 241-- Bad Request: /api/resend-otp/
+2023-12-13 23:44:58,684 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 23:46:17,190 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 23:47:09,063 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 23:47:50,769 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 23:48:14,443 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-13 23:49:13,384 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 01:44:19,109 - 241-- Not Found: /api/students/
+2023-12-14 01:47:19,846 - 241-- Internal Server Error: /api/add-product/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 379, in add_product
+    user_instance = CustomUser.objects.get(user=request.user)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-14 01:52:42,200 - 241-- Internal Server Error: /api/check-product/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 290, in check_product
+    user = CustomUser.objects.get(user=request.user)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-14 01:53:57,165 - 241-- Not Found: /api/check-product/
+2023-12-14 01:54:37,512 - 241-- Internal Server Error: /api/check-product/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 290, in check_product
+    user = CustomUser.objects.get(user=request.user)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-14 01:55:46,548 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-14 01:56:26,444 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 01:56:52,187 - 241-- Internal Server Error: /api/check-product/boat
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 290, in check_product
+    user = CustomUser.objects.get(user=request.user)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-14 01:57:56,193 - 241-- Internal Server Error: /api/check-product/boat
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 290, in check_product
+    user = CustomUser.objects.get(user=request.user)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-14 01:57:58,131 - 241-- Internal Server Error: /api/check-product/boat
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 290, in check_product
+    user = CustomUser.objects.get(user=request.user)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-14 02:33:41,950 - 241-- Not Found: /api/schema/docs/
+2023-12-14 02:34:28,111 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-14 02:34:33,802 - 241-- Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 246, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'api.views.WrappedAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+2023-12-14 02:34:33,850 - 241-- Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 246, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'api.views.WrappedAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+2023-12-14 02:34:36,055 - 241-- Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 246, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'api.views.WrappedAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+2023-12-14 02:34:36,089 - 241-- Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 246, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'api.views.WrappedAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+2023-12-14 02:34:36,646 - 241-- Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 246, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'api.views.WrappedAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+2023-12-14 02:34:36,682 - 241-- Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 246, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'api.views.WrappedAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+2023-12-14 02:34:37,653 - 241-- Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 246, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'api.views.WrappedAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+2023-12-14 02:34:37,689 - 241-- Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 246, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'api.views.WrappedAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+2023-12-14 02:34:38,257 - 241-- Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 246, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'api.views.WrappedAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+2023-12-14 02:34:38,312 - 241-- Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/drf_spectacular/generators.py", line 246, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'api.views.WrappedAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+2023-12-14 02:40:44,373 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-14 19:23:41,439 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 19:23:48,121 - 241-- Forbidden: /api/login/
+2023-12-14 19:24:23,049 - 241-- Not Found: /favicon.ico
+2023-12-14 19:25:57,790 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 19:26:05,095 - 241-- Forbidden: /api/login/
+2023-12-14 19:26:06,573 - 241-- Forbidden: /api/login/
+2023-12-14 19:26:07,671 - 241-- Forbidden: /api/login/
+2023-12-14 19:26:15,991 - 241-- Forbidden: /api/login/
+2023-12-14 19:29:09,015 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-14 19:29:13,838 - 241-- Forbidden: /api/login/
+2023-12-14 19:29:56,241 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-14 19:33:14,758 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-14 19:33:14,759 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-14 19:33:14,760 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-14 19:33:15,506 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-14 19:33:15,507 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-14 19:33:15,507 - 125-- body='{\n  "id": "cus_PBckRlkKLRuFAd",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702562595,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "A00FD5D7",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-14 19:33:15,507 - 125-- link=https://dashboard.stripe.com/test/logs/req_tKmO0fLbGa9EKP message='Dashboard link for request'
+2023-12-14 19:33:57,036 - 115-- Cache keys ['382229', 'otp_65']
+2023-12-14 19:33:57,038 - 120-- Cache keys ['382229', 'otp_65']
+2023-12-14 19:33:57,038 - 121-- incorret key
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 117, in verify
+    user_instance = CustomUser.objects.get(id=user_id)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.User.DoesNotExist: User matching query does not exist.
+2023-12-14 19:33:57,044 - 241-- Bad Request: /api/verify/
+2023-12-14 19:34:08,730 - 115-- Cache keys ['382229', 'otp_65']
+2023-12-14 19:34:08,731 - 118-- Cache keys ['382229', 'otp_65']
+2023-12-14 19:37:55,257 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 19:47:16,675 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 19:48:32,664 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-14 19:48:32,664 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yc&email=yogesh.choudhari%40webkorps.com
+2023-12-14 19:48:32,667 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-14 19:48:33,502 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 641
+2023-12-14 19:48:33,503 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-14 19:48:33,503 - 125-- body='{\n  "id": "cus_PBd0fQrEnQMsGs",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702563513,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhari@webkorps.com",\n  "invoice_prefix": "20782190",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yc",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-14 19:48:33,503 - 125-- link=https://dashboard.stripe.com/test/logs/req_TzOc3dcMSecEIy message='Dashboard link for request'
+2023-12-14 19:49:12,623 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:13:08,153 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:15:21,155 - 241-- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 65, in register
+    user_instnace = request.user.extra_user_fields
+AttributeError: 'AnonymousUser' object has no attribute 'extra_user_fields'
+2023-12-14 20:16:43,301 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:16:46,710 - 241-- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 65, in register
+    user_instnace = request.user.extra_user_fields
+AttributeError: 'AnonymousUser' object has no attribute 'extra_user_fields'
+2023-12-14 20:17:02,117 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:17:27,750 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:17:51,242 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:18:07,536 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:18:12,285 - 241-- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 67, in register
+    user_instnace = request.user.extra_user_fields
+AttributeError: 'AnonymousUser' object has no attribute 'extra_user_fields'
+2023-12-14 20:18:59,714 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:19:05,060 - 241-- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 66, in register
+    user_instnace = request.user.extra_user_fields
+AttributeError: 'AnonymousUser' object has no attribute 'extra_user_fields'
+2023-12-14 20:19:30,421 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:20:07,247 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:22:31,374 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:29:37,440 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:34:56,213 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:35:12,679 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:35:26,953 - 241-- Unauthorized: /api/register/
+2023-12-14 20:36:33,951 - 241-- Unauthorized: /api/register/
+2023-12-14 20:37:38,051 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:37:43,239 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:37:52,569 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:38:21,255 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:38:44,831 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:38:52,045 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:39:04,392 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:39:20,894 - 241-- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 60, in register
+    user_data = request.data
+AttributeError: 'AnonymousUser' object has no attribute 'extra_user_fields'
+2023-12-14 20:42:50,209 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:43:14,948 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:46:19,340 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:46:38,865 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:47:57,428 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:48:12,768 - 241-- Unauthorized: /api/register/
+2023-12-14 20:48:27,591 - 241-- Unauthorized: /api/register/
+2023-12-14 20:50:41,967 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 20:55:20,717 - 241-- Unauthorized: /api/register/
+2023-12-14 21:02:32,979 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:03:16,682 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:05:27,570 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:06:56,838 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:13:16,628 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:13:23,099 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:15:24,542 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:16:49,126 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:18:44,371 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:19:29,363 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:21:46,959 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:21:59,235 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:27:25,333 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:28:06,296 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:34:54,955 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-14 21:35:01,190 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-14 21:36:07,511 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-14 21:36:23,025 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-14 21:40:15,914 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-14 21:40:15,914 - 125-- api_version=2023-10-16 message='Post details' post_data=name=Brown&email=brown%40gmail.com
+2023-12-14 21:40:15,917 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-14 21:40:16,624 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 630
+2023-12-14 21:40:16,625 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-14 21:40:16,625 - 125-- body='{\n  "id": "cus_PBenzMHqx463Ir",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702570216,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "brown@gmail.com",\n  "invoice_prefix": "F95169D1",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "Brown",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-14 21:40:16,625 - 125-- link=https://dashboard.stripe.com/test/logs/req_gMcy9F2oQpKRNw message='Dashboard link for request'
+2023-12-14 21:42:50,751 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:43:46,964 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-14 21:44:52,709 - 241-- Unauthorized: /api/create-user/
+2023-12-14 21:45:22,097 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-14 21:45:22,097 - 125-- api_version=2023-10-16 message='Post details' post_data=name=yogesh&email=yogesh.choudhi%40webkorps.com
+2023-12-14 21:45:22,100 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-14 21:45:22,897 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 643
+2023-12-14 21:45:22,897 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-14 21:45:22,898 - 125-- body='{\n  "id": "cus_PBetSt8lggHHxr",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702570522,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "yogesh.choudhi@webkorps.com",\n  "invoice_prefix": "1D9A5E59",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "yogesh",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-14 21:45:22,898 - 125-- link=https://dashboard.stripe.com/test/logs/req_g1mVGIXUp5Whyb message='Dashboard link for request'
+2023-12-14 21:46:50,469 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-14 21:46:50,470 - 125-- api_version=2023-10-16 message='Post details' post_data=name=Brown&email=brown%40gmail.com
+2023-12-14 21:46:50,471 - 292-- Resetting dropped connection: api.stripe.com
+2023-12-14 21:46:51,063 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 630
+2023-12-14 21:46:51,063 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-14 21:46:51,063 - 125-- body='{\n  "id": "cus_PBeuLoZIS2AaEe",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702570610,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "brown@gmail.com",\n  "invoice_prefix": "383AF373",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "Brown",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-14 21:46:51,064 - 125-- link=https://dashboard.stripe.com/test/logs/req_KO85bQJFPHtkfa message='Dashboard link for request'
+2023-12-14 21:46:51,160 - 241-- Internal Server Error: /api/create-user/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-12-14 21:47:20,850 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:50:04,967 - 241-- Bad Request: /api/create-user/
+2023-12-14 21:51:22,590 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-14 21:51:22,590 - 125-- api_version=2023-10-16 message='Post details' post_data=name=Barbuen&email=brown%40gmail.com
+2023-12-14 21:51:22,593 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-14 21:51:23,345 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 632
+2023-12-14 21:51:23,345 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-14 21:51:23,345 - 125-- body='{\n  "id": "cus_PBezkj0XOqAV1j",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702570883,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "brown@gmail.com",\n  "invoice_prefix": "CD212EE0",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "Barbuen",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-14 21:51:23,346 - 125-- link=https://dashboard.stripe.com/test/logs/req_h16iggihunwIRA message='Dashboard link for request'
+2023-12-14 21:51:23,402 - 241-- Internal Server Error: /api/create-user/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-12-14 21:52:27,911 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-14 21:52:27,911 - 125-- api_version=2023-10-16 message='Post details' post_data=name=Barbuenad&email=brown%40gmail.com
+2023-12-14 21:52:28,525 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 634
+2023-12-14 21:52:28,526 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-14 21:52:28,527 - 125-- body='{\n  "id": "cus_PBf02FtrWxv37y",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702570948,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "brown@gmail.com",\n  "invoice_prefix": "EBCA1103",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "Barbuenad",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-14 21:52:28,527 - 125-- link=https://dashboard.stripe.com/test/logs/req_7tpDoOMuXNh5K2 message='Dashboard link for request'
+2023-12-14 21:54:39,766 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:57:50,551 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-14 21:58:37,655 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-14 21:59:01,375 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-14 21:59:05,069 - 241-- Bad Request: /api/create-user/
+2023-12-14 21:59:11,372 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-14 21:59:11,372 - 125-- api_version=2023-10-16 message='Post details' post_data=name=Barbunad&email=brown%40gmail.com
+2023-12-14 21:59:11,374 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-14 21:59:11,921 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 633
+2023-12-14 21:59:11,924 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-14 21:59:11,924 - 125-- body='{\n  "id": "cus_PBf6a3vWDLSrek",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1702571351,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "brown@gmail.com",\n  "invoice_prefix": "2BEE494D",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "Barbunad",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-14 21:59:11,924 - 125-- link=https://dashboard.stripe.com/test/logs/req_J5X7HWrwzNrpqx message='Dashboard link for request'
+2023-12-14 21:59:36,592 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-14 21:59:40,472 - 241-- Bad Request: /api/create-user/
+2023-12-14 21:59:46,933 - 241-- Bad Request: /api/create-user/
+2023-12-15 00:26:42,263 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/urls.py changed, reloading.
+2023-12-15 00:27:59,333 - 241-- Not Found: /api/survey/oauth/dialog
+2023-12-15 00:28:35,798 - 241-- Not Found: /survey/oauth/dialog
+2023-12-15 00:28:57,336 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/urls.py changed, reloading.
+2023-12-15 00:29:05,739 - 241-- Method Not Allowed: /api/survey/oauth/dialog/
+2023-12-15 00:29:15,976 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 00:31:40,256 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 01:24:12,810 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 01:24:45,849 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 01:27:54,093 - 241-- Method Not Allowed: /api/survey/oauth/callback/
+2023-12-15 01:28:06,644 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 01:50:26,782 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/urls.py changed, reloading.
+2023-12-15 01:50:38,567 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 01:50:41,066 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 01:50:45,638 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 01:51:46,833 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/urls.py changed, reloading.
+2023-12-15 01:56:05,800 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 01:56:42,880 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/urls.py changed, reloading.
+2023-12-15 01:58:10,172 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 01:58:54,517 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/urls.py changed, reloading.
+2023-12-15 02:00:55,586 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:06:21,349 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:07:49,780 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:09:18,397 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:09:45,016 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:10:54,542 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:13:05,119 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:13:56,573 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:16:56,145 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:16:59,774 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:19:42,049 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:19:46,865 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/urls.py changed, reloading.
+2023-12-15 02:21:48,984 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:22:16,820 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:22:24,462 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:24:34,142 - 241-- Internal Server Error: /api/survey/oauth/dialog/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 20, in oauth_dialog
+    return redirect(auth_dialog_uri)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 20, in oauth_dialog
+    return redirect(auth_dialog_uri)
+  File "/usr/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+2023-12-15 02:25:35,767 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:28:15,497 - 241-- Internal Server Error: /api/survey/oauth/dialog/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 13, in oauth_dialog
+    url_params = urlencode({
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 13, in oauth_dialog
+    url_params = urlencode({
+  File "/usr/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+2023-12-15 02:28:15,686 - 241-- Not Found: /favicon.ico
+2023-12-15 02:28:35,250 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:28:39,645 - 241-- Internal Server Error: /api/survey/oauth/dialog/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 21, in oauth_dialog
+    return redirect(auth_dialog_uri)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 21, in oauth_dialog
+    return redirect(auth_dialog_uri)
+  File "/usr/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+2023-12-15 02:29:53,648 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:31:18,801 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:31:41,792 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:31:45,447 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:32:16,325 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:32:24,036 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:32:40,976 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:36:36,980 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:38:45,427 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:39:20,641 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:40:01,825 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:40:15,135 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:41:01,061 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:46:56,373 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:48:20,286 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:48:57,450 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:49:04,161 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:50:23,256 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:55:57,663 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:59:00,007 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 02:59:07,527 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:01:42,533 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:02:21,542 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:02:35,187 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:03:23,221 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:03:43,690 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:04:07,288 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:04:44,536 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:05:07,607 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:05:19,638 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:05:36,424 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:07:47,440 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-15 03:07:48,987 - 546-- https://api.surveymonkey.com:443 "POST /oauth/token HTTP/1.1" 200 None
+2023-12-15 03:08:21,312 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-15 03:08:22,676 - 546-- https://api.surveymonkey.com:443 "POST /oauth/token HTTP/1.1" 400 66
+2023-12-15 03:08:49,923 - 241-- Internal Server Error: /api/survey/oauth/callback
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'str'>`
+2023-12-15 03:10:57,793 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:11:00,318 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:11:30,134 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-15 03:11:31,811 - 546-- https://api.surveymonkey.com:443 "POST /oauth/token HTTP/1.1" 400 66
+2023-12-15 03:11:42,461 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-15 03:11:43,787 - 546-- https://api.surveymonkey.com:443 "POST /oauth/token HTTP/1.1" 400 66
+2023-12-15 03:12:53,364 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:13:12,214 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:13:28,789 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-15 03:13:29,874 - 546-- https://api.surveymonkey.com:443 "POST /oauth/token HTTP/1.1" 200 None
+2023-12-15 03:30:10,022 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:30:18,246 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:31:16,630 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:31:57,693 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:32:24,406 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:32:30,598 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:33:28,929 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-15 03:37:58,401 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-15 03:37:59,926 - 546-- https://api.surveymonkey.com:443 "POST /oauth/token HTTP/1.1" 200 None

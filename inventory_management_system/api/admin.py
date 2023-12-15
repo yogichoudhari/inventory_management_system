@@ -2,14 +2,18 @@ from django.contrib import admin
 from .models import Product, User, Roll, Account, Permission, PaymentLog
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display=["id", "user", "phone", "roll", "state", "city", "account", "display_permissions","stripe_id"]
+    list_display=["id", "user", "phone", "roll", "state", "city",
+                   "account", "display_permissions","stripe_id",
+                   "is_verified"]
     def display_permissions(self, obj):
-        return ', '.join([permission.permission_name+"_"+permission.related_to.lower() for permission in obj.permission.all()])
+        return ', '.join([permission.permission_name+"_"+permission.related_to.lower() 
+                          for permission in obj.permission.all()])
     
     display_permissions.short_description = 'Permissions'
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['id', 'category', "brand", "title", "actual_price", "discounted_price", 'quantity', 'in_stock', 'account', 'created_by']
+    list_display = ['id', 'category', "brand", "title", "actual_price",
+                     "discounted_price", 'quantity', 'in_stock', 'account', 'created_by']
 @admin.register(Roll)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['id', 'name',]
