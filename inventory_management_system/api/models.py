@@ -143,3 +143,7 @@ class PaymentLog(models.Model):
     product = models.ForeignKey(Product,on_delete=models.SET_NULL,null=True)
 
 
+class Survey(models.Model):
+    survey_id = models.PositiveIntegerField()
+    collector_id = models.PositiveIntegerField()
+    product = models.OneToOneField(Product,on_delete=models.CASCADE)

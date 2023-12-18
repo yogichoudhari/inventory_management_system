@@ -65,28 +65,38 @@ def surveys(request):
 	url = "https://api.surveymonkey.com/v3/surveys"
 	access_token = cache.get('access_token')
 	headers = {
-	    'Accept': "application/json",
-	    'Authorization': f"Bearer {access_token}"
+	    'accept': "application/json",
+	    'Authorization': f"Bearer {access_token}",
+		'Content-type':"application/json"
 	    }
 	if request.method=="GET":
 		res = requests.get(url, headers=headers)
 		return Response({"status":"success","data":res.json()})
 	elif request.method=="POST":
 		pdb.set_trace()
-		survey_payload = request.data.get("survey_data")
-		survey_payload = json.dumps(survey_payload)
-		headers.update({"Content_type":"application/json"})
+		survey_payload = request.data
+		survey_res = requests.post(url,json=survey_payload,headers=headers)
+		survey_id = survey_res.json().get("id")
+		collector_creation_end_point = f"/{survey_id}/collectors"
+		url = url+collector_creation_end_point
+		collector_payload = {
+  			"type": "weblink",
+  			"name": "My Collector",
+  			"thank_you_page": {
+  			  "is_enabled": True,
+  			  "message": "Thank you for taking this survey."
+  			},
+  			"thank_you_message": "Thank you for taking this survey.",
+		}
 
-		survey_res = requests.post(url,data=survey_payload,headers=headers)
-		survey_id = survey_res.json().get('id')
-		collector_payload = request.data.get("collector_data")
-		collector_payload = json.dumps(collector_payload)
-		end_point = f"/{survey_id}/collectors"
-		url = url+end_point
-		collector_res = requests.post(url=url,data=collector_payload,headers=headers) 
-		return Response({"status":"success","message":"none"},
+		collector_res = requests.post(url=url,json=collector_payload,headers=headers)
+		colllector_id = collector_res.json().get("id")
+		return Response({"status":"success","message":"your survey successfully created"},
 				  status=status.HTTP_200_OK)
 
 
 
-
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def response(request):
+	pass

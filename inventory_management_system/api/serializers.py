@@ -187,7 +187,7 @@ class ProductSerializer(serializers.ModelSerializer):
     in_stock = serializers.SerializerMethodField(read_only=True)
     class Meta:
         model = Product
-        exclude = ['account']
+        exclude = ['account','created_by']
 
     def update(self, instance, validated_data):
         validated_data['quantity']+=instance.quantity

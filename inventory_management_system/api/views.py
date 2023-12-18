@@ -13,7 +13,7 @@ from .serializers import (ProductSerializer,CustomUserSerializer,
                           LoginSerializer, UpdateCustomUserSerializer,
                           CheckProductSerializer, SearchedProductListSerializer, 
                           AdminUserSerializer,PermissionSerializer, PaymentLogSerializer)
-from .models import Product, Roll, state_choices
+from .models import Product, Roll, state_choices , Survey
 from indian_cities.dj_city import cities
 from django.db.models import Q
 from django.forms.models import model_to_dict
@@ -31,10 +31,22 @@ from django.core.mail import send_mail
 from .utility_functions import (get_tokens_for_user, generate_otp, otp_temp_storage,
                                 send_email,send_otp_via_email)
 import logging
+import requests
 # for views responses
+
 STATUS_SUCCESS = "success"
 STATUS_FAILED = "failed"  
 
+# Monkeysurvey Configuration
+
+SM_API_BASE = "https://api.surveymonkey.com"
+AUTH_CODE_ENDPOINT = "/oauth/authorize"
+ACCESS_TOKEN_ENDPOINT = "/oauth/token"
+redirect_uri = "http://localhost:8000/api/survey/oauth/callback"
+CLIENT_ID= config("CLIENT_ID")
+CLIENT_SECRET = config("CLIENT_SECRET")
+
+#log configuration 
 logging.basicConfig(filename="logfile.log",style='{',level=logging.DEBUG,format="{asctime} - {lineno}-- {message}")
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -145,7 +157,7 @@ def verify(request):
                             status=status.HTTP_200_OK)
         else:
             return Response({"status":STATUS_FAILED,"error":"incorrect otp"},
-                            status=status.HTTP_400_BAD_REQUEST)
+                           status=status.HTTP_400_BAD_REQUEST)
     else:
         return Response({"status":STATUS_FAILED,"error":"otp is expired"},
                         status=status.HTTP_400_BAD_REQUEST)
@@ -371,7 +383,7 @@ def update_stock(request):
 
 @api_view(["POST"])
 def add_product(request):
-    # pdb.set_trace()
+    pdb.set_trace()
     if not request.user.is_superuser and request.user.is_authenticated:
         user_instance = CustomUser.objects.get(user=request.user)
         try:
@@ -394,7 +406,89 @@ def add_product(request):
                                                many=type(request.data)==list,
                                                context={'user_instance':user_instance})
     if serialize_product_data.is_valid():
-        serialize_product_data.save()
+        product = serialize_product_data.save()
+        product_id = product.id
+        url = "https://api.surveymonkey.com/v3/surveys"
+        access_token = cache.get('access_token')
+        headers = {
+	    'accept': "application/json",
+	    'Authorization': f"Bearer {access_token}",
+		'Content-type':"application/json"
+	    }
+        survey_payload = {
+          "title": " Product Quality Survey",
+          "pages": [
+            {
+              "questions": [
+              {
+            "headings": [
+                {
+                    "heading": "which star would you like to give this product??"
+                }
+            ],
+            "position": 1,
+            "family": "matrix",
+            "subtype": "rating",
+            "display_options": {
+                "display_type": "emoji",
+                "display_subtype": "star"
+            },
+            "forced_ranking": False,
+            "answers":{
+            "rows": [
+              {
+                "visible": True,
+                "text": "",
+                "position": 1
+              }
+            ],
+            "choices": [
+              {
+                "weight": 1,
+                "text": ""
+              },
+              {
+                "weight": 2,
+                "text": ""
+              },
+              {
+                "weight": 3,
+                "text": ""
+              },
+              {
+                "weight": 4,
+                "text": ""
+              },
+              {
+                "weight": 5,
+                "text": ""
+              }
+            ]
+          }
+        }
+              ]
+            }
+          ]
+        }
+
+
+        survey_res = requests.post(url,json=survey_payload,headers=headers)
+        survey_id = survey_res.json().get("id")
+        collector_creation_end_point = f"/{survey_id}/collectors"
+        url = url+collector_creation_end_point
+        collector_payload = {
+  			"type": "weblink",
+  			"name": "My Collector",
+  			"thank_you_page": {
+  			  "is_enabled": True,
+  			  "message": "Thank you for taking this survey."
+  			},
+  			"thank_you_message": "Thank you for taking this survey.",
+            "allow_multiple_responses": True,
+		}
+        collector_res = requests.post(url=url,json=collector_payload,headers=headers)
+        collector_id = collector_res.json().get("id")
+        Survey.objects.create(survey_id=survey_id,collector_id=collector_id,product=product)
         return Response({"status":STATUS_SUCCESS,
                          "message":"product added successfully"},
                         status=status.HTTP_201_CREATED)
@@ -501,6 +595,49 @@ def payment_failed(request,session_id):
         return Response({"status":STATUS_FAILED,
                          "message":f"payment of {total_amount} was unsuccessfull"},
                         status=status.HTTP_400_BAD_REQUEST)
+    
+@api_view(["POST","GET"])
+@permission_classes([IsAuthenticated])
+def product_feedback(request,product_id):
+    product_id = product_id
+    user = CustomUser.objects.get(user=request.user)
+    product = Product.objects.get(id=product_id)
+    access_token = cache.get('access_token')
+    headers = {
+	'accept': "application/json",
+	'Authorization': f"Bearer {access_token}"
+	}
+    if request.method=="POST":
+        try:
+            product_log = PaymentLog.objects.filter(product=product,user=user).last()
+        except:
+            return Response({"status":STATUS_FAILED,'error':"product needs to be purchased first in order to review it"},
+                            status=status.HTTP_400_BAD_REQUEST)
+        survey_obj = Survey.objects.get(product=product)
+        collector_id = survey_obj.collector_id
+        endpoint_url = f"/v3/collectors/{collector_id}"
+        url = SM_API_BASE + endpoint_url
+        collector = requests.get(url=url,headers=headers)
+        collector_url = collector.json().get('url')
+        return Response({"status":STATUS_SUCCESS,'url':collector_url},
+                    status=status.HTTP_200_OK)
+    elif request.method=="GET":
+        user = CustomUser.objects.get(user=request.user)
+        if request.user.is_superuser and user.account==product.account:
+            survey_obj = Survey.objects.get(product=product)
+            survey_id = survey_obj.survey_id
+            endpoint_url = f"/v3/surveys/{survey_id}"
+            url = SM_API_BASE + endpoint_url
+            survey_res = requests.get(url=url,headers=headers)
+            analyze_url = survey_res.json().get("analyze_url")
+            return Response({"status":STATUS_SUCCESS,"url":analyze_url},
+                            status=status.HTTP_200_OK)
+        elif not request.user.is_superuser:
+            return Response({"status":STATUS_FAILED,"error":"user does not have permission"},
+                            status=status.HTTP_403_FORBIDDEN)
+        else:
+            return Response({"status":STATUS_FAILED,"url":None},
+                            status=status.HTTP_404_NOT_FOUND)
 
 @api_view(["GET"])
 @permission_classes([IsAdminUser,IsAuthenticated])

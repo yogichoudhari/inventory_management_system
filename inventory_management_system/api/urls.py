@@ -18,7 +18,8 @@ urlpatterns = [
     path("create-permission-set/", views.create_permission_set),
     path("payment-success/<str:session_id>",views.payment_success),
     path("payment-failed/<str:session_id>",views.payment_failed),
-    path("payment-history/",views.payment_history)
+    path("payment-history/",views.payment_history),
+    path("survey/<int:product_id>/response",views.product_feedback)
 ]
 
 

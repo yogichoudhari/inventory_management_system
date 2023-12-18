@@ -2155,3 +2155,1097 @@ UnboundLocalError: local variable 'res' referenced before assignment
 2023-12-16 04:00:26,674 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
 2023-12-16 04:00:28,813 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
 2023-12-16 04:00:30,978 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 18:59:52,623 - 241-- Unauthorized: /api/survey/
+2023-12-18 19:01:19,853 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 19:01:21,843 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1058
+2023-12-18 19:02:37,423 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 19:02:38,739 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/411046088/collectors HTTP/1.1" 400 133
+2023-12-18 19:06:10,299 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 19:06:13,755 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 19:06:16,943 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 19:06:26,226 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 19:06:35,452 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 19:16:37,716 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 19:16:39,713 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1062
+2023-12-18 19:16:39,717 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 19:16:40,838 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/411046343/collectors HTTP/1.1" 400 133
+2023-12-18 19:23:35,572 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 19:23:37,843 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1070
+2023-12-18 19:23:43,625 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 19:23:44,458 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/516020968/collectors HTTP/1.1" 400 133
+2023-12-18 19:56:12,146 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 19:56:14,171 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1050
+2023-12-18 19:56:17,451 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 19:56:18,780 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/516021689/collectors HTTP/1.1" 400 133
+2023-12-18 20:00:28,500 - 241-- Unauthorized: /api/survey/
+2023-12-18 20:01:01,111 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:01:03,241 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1048
+2023-12-18 20:01:07,943 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:01:09,182 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/411047210/collectors HTTP/1.1" 400 133
+2023-12-18 20:03:49,326 - 241-- Internal Server Error: /api/survey/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 86, in surveys
+    return Response({"status":"success","message":"none"},
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 86, in surveys
+    return Response({"status":"success","message":"none"},
+  File "/usr/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+2023-12-18 20:04:22,270 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:04:24,457 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1058
+2023-12-18 20:04:27,456 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:04:28,656 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/411047273/collectors HTTP/1.1" 400 133
+2023-12-18 20:07:42,735 - 241-- Internal Server Error: /api/survey/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 86, in surveys
+    return Response({"status":"success","message":"none"},
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 86, in surveys
+    return Response({"status":"success","message":"none"},
+  File "/usr/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+2023-12-18 20:09:30,110 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:09:32,270 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:09:36,293 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:09:41,509 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:09:47,576 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:09:50,542 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:09:54,515 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:09:59,730 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:10:02,891 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:10:05,075 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:10:08,275 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:10:10,455 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:10:13,663 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:10:20,923 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:10:32,227 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:11:01,481 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:11:02,797 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 400 188
+2023-12-18 20:14:29,237 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:14:30,775 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/None/collectors HTTP/1.1" 400 133
+2023-12-18 20:15:07,934 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:15:11,079 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:16:22,128 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:16:23,619 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 400 188
+2023-12-18 20:16:48,604 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:16:49,730 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/None/collectors HTTP/1.1" 400 133
+2023-12-18 20:20:05,888 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:20:07,974 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:20:18,989 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:20:20,476 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 400 188
+2023-12-18 20:20:26,031 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:20:27,236 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/None/collectors HTTP/1.1" 400 133
+2023-12-18 20:21:15,770 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:21:23,091 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:21:24,578 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 400 188
+2023-12-18 20:21:29,971 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:21:31,050 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/None/collectors HTTP/1.1" 400 133
+2023-12-18 20:22:01,078 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:22:12,378 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:22:14,526 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:22:26,475 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:22:28,071 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 400 188
+2023-12-18 20:22:34,199 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:22:35,439 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/None/collectors HTTP/1.1" 400 133
+2023-12-18 20:24:58,137 - 241-- Internal Server Error: /api/survey/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/usr/lib/python3.8/bdb.py", line 92, in trace_dispatch
+    return self.dispatch_return(frame, arg)
+  File "/usr/lib/python3.8/bdb.py", line 154, in dispatch_return
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+2023-12-18 20:25:40,304 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:25:41,708 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 400 188
+2023-12-18 20:25:47,276 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:25:49,388 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1058
+2023-12-18 20:29:42,812 - 241-- Internal Server Error: /api/survey/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 87, in surveys
+    end_point = f"/{survey_id}/collectors"
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 87, in surveys
+    end_point = f"/{survey_id}/collectors"
+  File "/usr/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+2023-12-18 20:30:43,775 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:30:45,924 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1049
+2023-12-18 20:31:14,451 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:31:15,823 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/411047780/collectors HTTP/1.1" 400 133
+2023-12-18 20:31:40,007 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:31:41,011 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/516022458/collectors HTTP/1.1" 400 133
+2023-12-18 20:34:40,553 - 241-- Internal Server Error: /api/survey/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/usr/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+2023-12-18 20:34:57,028 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:34:58,533 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 400 188
+2023-12-18 20:37:43,771 - 241-- Internal Server Error: /api/survey/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 80, in surveys
+    survey_id = survey_res.json().get('id')
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py", line 80, in surveys
+    survey_id = survey_res.json().get('id')
+  File "/usr/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+2023-12-18 20:37:54,750 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:38:04,127 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:38:14,463 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:38:18,659 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:38:23,898 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:39:00,731 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:39:25,712 - 241-- Unauthorized: /api/survey/
+2023-12-18 20:41:14,031 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:41:53,088 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:41:58,301 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:42:06,609 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:42:26,499 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:42:27,648 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 400 199
+2023-12-18 20:42:58,045 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:43:05,270 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:43:07,250 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:43:17,336 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:43:20,295 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:43:26,374 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:43:47,911 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:44:07,909 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:44:09,434 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 400 199
+2023-12-18 20:44:39,295 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:44:41,487 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:44:50,878 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:44:58,112 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:44:59,934 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1049
+2023-12-18 20:47:42,228 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:47:44,524 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:47:51,793 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:47:54,048 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:47:56,212 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:47:58,321 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:50:08,148 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:50:13,444 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:50:17,774 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:50:25,851 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:50:31,861 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:50:33,890 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:50:36,860 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:50:41,047 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:50:45,193 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:50:50,476 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:50:59,721 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:51:03,747 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:51:51,947 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:52:00,249 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:52:02,399 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:52:07,576 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:52:12,868 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:52:15,020 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:52:21,194 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:52:23,221 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:52:27,201 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:52:41,465 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:52:47,637 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:52:51,763 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:53:15,328 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:53:20,498 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:53:25,750 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:53:28,859 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:53:35,277 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:53:43,524 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:53:46,736 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:53:52,926 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:53:58,102 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:54:13,416 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:54:15,464 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:54:17,651 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:54:22,780 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:54:30,024 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:54:33,309 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:54:36,373 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:55:12,212 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:55:17,383 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:55:22,550 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:56:00,324 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:56:02,648 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1070
+2023-12-18 20:56:32,742 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-18 20:56:34,191 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/411048520/collectors HTTP/1.1" 201 1102
+2023-12-18 20:57:44,038 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 20:57:46,117 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 21:09:34,456 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 21:18:16,831 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-18 21:55:13,797 - 241-- Not Found: /favicon.ico
+2023-12-18 23:14:16,382 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:14:19,685 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:14:22,103 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:14:24,661 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:14:31,980 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:14:36,262 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:14:38,725 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:14:42,074 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:14:44,709 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:14:48,101 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:14:50,307 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:14:57,633 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:21:17,936 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:21:30,129 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:21:34,283 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:21:38,351 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:21:42,497 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:22:14,031 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:22:18,190 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:22:55,797 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:23:00,808 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:23:11,946 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:23:18,150 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:23:20,236 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-18 23:34:39,184 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/models.py changed, reloading.
+2023-12-19 00:24:27,597 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:25:22,052 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:25:24,187 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:25:35,601 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:25:38,941 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:25:54,297 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:29:44,455 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:30:24,835 - 241-- Bad Request: /api/add-product/
+2023-12-19 00:31:13,575 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/serializers.py changed, reloading.
+2023-12-19 00:31:56,662 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 00:31:58,757 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1066
+2023-12-19 00:31:58,761 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 00:32:00,149 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/516027746/collectors HTTP/1.1" 201 1106
+2023-12-19 00:32:00,257 - 241-- Internal Server Error: /api/add-product/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 424, in add_product
+    "headings": [
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Survey() got unexpected keyword arguments: 'colllector_id'
+2023-12-19 00:32:45,942 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:32:50,817 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:32:52,955 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:32:57,100 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:33:47,483 - 241-- Internal Server Error: /admin/api/product/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "api_survey" does not exist
+LINE 1: ...."account_id", "api_product"."created_by_id" FROM "api_surve...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 412, in __bool__
+    self._fetch_all()
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "api_survey" does not exist
+LINE 1: ...."account_id", "api_product"."created_by_id" FROM "api_surve...
+                                                             ^
+
+2023-12-19 00:34:29,195 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/admin.py changed, reloading.
+2023-12-19 00:35:49,886 - 241-- Internal Server Error: /admin/api/survey/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "api_survey" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "api_survey"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1926, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/options.py", line 836, in get_changelist_instance
+    return ChangeList(
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/views/main.py", line 123, in __init__
+    self.get_results(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/contrib/admin/views/main.py", line 279, in get_results
+    result_count = paginator.count
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/paginator.py", line 93, in count
+    return c()
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "api_survey" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "api_survey"
+                                          ^
+
+2023-12-19 00:37:19,723 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 00:37:21,867 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1072
+2023-12-19 00:37:21,871 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 00:37:23,402 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/411053352/collectors HTTP/1.1" 201 1106
+2023-12-19 00:47:22,213 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 00:47:30,473 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 00:47:32,588 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 00:48:33,894 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 00:48:42,126 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 00:48:45,325 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 00:49:16,052 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 00:49:29,201 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 00:49:47,536 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:49:55,604 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:49:57,649 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:50:00,646 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:50:05,237 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:50:16,410 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:50:18,351 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:50:24,385 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:50:30,499 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:50:32,561 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:52:33,182 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/admin.py changed, reloading.
+2023-12-19 00:52:39,500 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/admin.py changed, reloading.
+2023-12-19 00:55:44,810 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:56:00,714 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:56:04,922 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:56:19,473 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:57:51,423 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 00:58:11,862 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:00:33,741 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:01:11,602 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:01:26,894 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:01:33,152 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:01:35,298 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:01:39,450 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:01:42,686 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:01:59,056 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:02:08,294 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:02:10,457 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:02:12,657 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:02:21,926 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:02:32,161 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:02:35,399 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:02:42,596 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:03:51,008 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:03:55,840 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:04:04,057 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:04:07,196 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:05:54,518 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:06:07,779 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:06:18,017 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:06:20,343 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:06:22,508 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:06:33,863 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:06:40,039 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:06:46,211 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:07:00,645 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:07:02,763 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:07:06,881 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:08:28,639 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:08:32,857 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:08:45,716 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:09:53,061 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:09:57,285 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:10:06,630 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:10:11,803 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:10:52,676 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:10:58,912 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:11:31,336 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:11:54,909 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:12:02,134 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:12:12,869 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:12:22,783 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:13:02,680 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:13:06,107 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:14:48,215 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:14:57,500 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:17:32,880 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:17:35,091 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:17:37,283 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:17:48,185 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:17:50,447 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:17:52,599 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:17:56,880 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:17:59,048 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:18:01,372 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:18:04,517 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:18:06,683 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:18:09,813 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:18:13,976 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:18:17,178 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:18:29,167 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:18:31,364 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:18:41,572 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:18:52,298 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:19:03,099 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:19:05,302 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:22:06,518 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/checkout/sessions
+2023-12-19 01:22:06,518 - 125-- api_version=2023-10-16 message='Post details' post_data=line_items[0][price_data][currency]=inr&line_items[0][price_data][product_data][name]=Sweatshirt&line_items[0][price_data][product_data][description]=Full+Sleeves+Sweatshirt&line_items[0][price_data][unit_amount]=99500&line_items[0][quantity]=1&metadata[product_id]=19&metadata[product_quantity]=1&metadata[user_id]=25&mode=payment&customer=cus_P92GT9jAX21IeT&success_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-success%2F%7BCHECKOUT_SESSION_ID%7D&cancel_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-failed%2F%7BCHECKOUT_SESSION_ID%7D
+2023-12-19 01:22:06,520 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-19 01:22:07,295 - 546-- https://api.stripe.com:443 "POST /v1/checkout/sessions HTTP/1.1" 200 2580
+2023-12-19 01:22:07,296 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2023-12-19 01:22:07,296 - 125-- body='{\n  "id": "cs_test_a1EocdWPvuQGkBPiTcDTz1KXj5zcRDCE16YGk3Z8UVR3WwyfdUc2X0ybvK",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 99500,\n  "amount_total": 99500,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702929127,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92GT9jAX21IeT",\n  "customer_creation": null,\n  "customer_details": {\n    "address": null,\n    "email": "MUser01@gmail.com",\n    "name": null,\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": null\n  },\n  "customer_email": null,\n  "expires_at": 1703015526,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "19",\n    "product_quantity": "1",\n    "user_id": "25"\n  },\n  "mode": "payment",\n  "payment_intent": null,\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "unpaid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "open",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": "https://checkout.stripe.com/c/pay/cs_test_a1EocdWPvuQGkBPiTcDTz1KXj5zcRDCE16YGk3Z8UVR3WwyfdUc2X0ybvK#fidkdWxOYHwnPyd1blpxYHZxWjA0SkNOfE1WRnw2QF9Tc09US3NDQmI9aW5SVU5uX31Pc203NUM8YXVLT25GMWFfQm1cUmtOYFZIPVI1Y2lEUTJPU1UyYlxdSDx0cTB%2FXGgzcnNdNWJtXW1hNTU2bjdyaDE2bCcpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"\n}' message='API response body'
+2023-12-19 01:22:07,296 - 125-- link=https://dashboard.stripe.com/test/logs/req_vYJnfM1cCwU0al message='Dashboard link for request'
+2023-12-19 01:22:26,660 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1EocdWPvuQGkBPiTcDTz1KXj5zcRDCE16YGk3Z8UVR3WwyfdUc2X0ybvK
+2023-12-19 01:22:26,661 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:22:26,663 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-19 01:22:27,295 - 546-- https://api.stripe.com:443 "GET /v1/checkout/sessions/cs_test_a1EocdWPvuQGkBPiTcDTz1KXj5zcRDCE16YGk3Z8UVR3WwyfdUc2X0ybvK HTTP/1.1" 200 2391
+2023-12-19 01:22:27,295 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1EocdWPvuQGkBPiTcDTz1KXj5zcRDCE16YGk3Z8UVR3WwyfdUc2X0ybvK response_code=200
+2023-12-19 01:22:27,296 - 125-- body='{\n  "id": "cs_test_a1EocdWPvuQGkBPiTcDTz1KXj5zcRDCE16YGk3Z8UVR3WwyfdUc2X0ybvK",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 99500,\n  "amount_total": 99500,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702929127,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92GT9jAX21IeT",\n  "customer_creation": null,\n  "customer_details": {\n    "address": {\n      "city": null,\n      "country": "IN",\n      "line1": null,\n      "line2": null,\n      "postal_code": null,\n      "state": null\n    },\n    "email": "MUser01@gmail.com",\n    "name": "MyntraUser01",\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": []\n  },\n  "customer_email": null,\n  "expires_at": 1703015526,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "19",\n    "product_quantity": "1",\n    "user_id": "25"\n  },\n  "mode": "payment",\n  "payment_intent": "pi_3OOmrPSCy3EZVvJQ1fkG7wRG",\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "paid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "complete",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": null\n}' message='API response body'
+2023-12-19 01:22:27,296 - 125-- link=https://dashboard.stripe.com/test/logs/req_1QHYUx4YF9vV6o message='Dashboard link for request'
+2023-12-19 01:22:27,298 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/customers/cus_P92GT9jAX21IeT
+2023-12-19 01:22:27,298 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:22:27,571 - 546-- https://api.stripe.com:443 "GET /v1/customers/cus_P92GT9jAX21IeT HTTP/1.1" 200 639
+2023-12-19 01:22:27,572 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers/cus_P92GT9jAX21IeT response_code=200
+2023-12-19 01:22:27,572 - 125-- body='{\n  "id": "cus_P92GT9jAX21IeT",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1701965561,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "MUser01@gmail.com",\n  "invoice_prefix": "C0EEC810",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "MyntraUser01",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-19 01:22:27,572 - 125-- link=https://dashboard.stripe.com/test/logs/req_06yaqzgHukvk74 message='Dashboard link for request'
+2023-12-19 01:22:27,819 - 241-- Not Found: /favicon.ico
+2023-12-19 01:23:28,984 - 241-- Not Found: /api/survey/19/response
+2023-12-19 01:23:58,291 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 01:24:01,664 - 241-- Internal Server Error: /api/survey/19/response
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 609, in product_feedback
+    collector_id = survey_obj.get("collector_id")
+AttributeError: 'Survey' object has no attribute 'get'
+2023-12-19 01:24:46,478 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:24:53,054 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 01:24:54,600 - 546-- https://api.surveymonkey.com:443 "GET /v3/collectors/429351666 HTTP/1.1" 200 None
+2023-12-19 01:33:46,297 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:34:01,236 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:34:03,354 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:34:14,601 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:34:16,799 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:34:23,036 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:34:39,717 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:34:51,691 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:34:59,984 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:35:08,805 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:35:10,950 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:35:23,942 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:35:29,138 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:35:35,311 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:35:41,518 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:35:47,824 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:35:56,035 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:40:17,204 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/checkout/sessions
+2023-12-19 01:40:17,205 - 125-- api_version=2023-10-16 message='Post details' post_data=line_items[0][price_data][currency]=inr&line_items[0][price_data][product_data][name]=Jeans&line_items[0][price_data][product_data][description]=Demo+Jeans&line_items[0][price_data][unit_amount]=9900&line_items[0][quantity]=1&metadata[product_id]=17&metadata[product_quantity]=1&metadata[user_id]=26&mode=payment&customer=cus_P92Gk1uqTVtSYf&success_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-success%2F%7BCHECKOUT_SESSION_ID%7D&cancel_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-failed%2F%7BCHECKOUT_SESSION_ID%7D
+2023-12-19 01:40:17,208 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-19 01:40:18,033 - 546-- https://api.stripe.com:443 "POST /v1/checkout/sessions HTTP/1.1" 200 2578
+2023-12-19 01:40:18,034 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2023-12-19 01:40:18,034 - 125-- body='{\n  "id": "cs_test_a1Yq9kMVwb3i0D20KBnPXwgWWsRwvH6Zmndrfc2H28S9bSviybwUOawPDB",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 9900,\n  "amount_total": 9900,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702930217,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92Gk1uqTVtSYf",\n  "customer_creation": null,\n  "customer_details": {\n    "address": null,\n    "email": "MUser02@gmail.com",\n    "name": null,\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": null\n  },\n  "customer_email": null,\n  "expires_at": 1703016617,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "17",\n    "product_quantity": "1",\n    "user_id": "26"\n  },\n  "mode": "payment",\n  "payment_intent": null,\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "unpaid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "open",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": "https://checkout.stripe.com/c/pay/cs_test_a1Yq9kMVwb3i0D20KBnPXwgWWsRwvH6Zmndrfc2H28S9bSviybwUOawPDB#fidkdWxOYHwnPyd1blpxYHZxWjA0SkNOfE1WRnw2QF9Tc09US3NDQmI9aW5SVU5uX31Pc203NUM8YXVLT25GMWFfQm1cUmtOYFZIPVI1Y2lEUTJPU1UyYlxdSDx0cTB%2FXGgzcnNdNWJtXW1hNTU2bjdyaDE2bCcpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"\n}' message='API response body'
+2023-12-19 01:40:18,034 - 125-- link=https://dashboard.stripe.com/test/logs/req_IS3ziDMbqXBq09 message='Dashboard link for request'
+2023-12-19 01:40:35,621 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1Yq9kMVwb3i0D20KBnPXwgWWsRwvH6Zmndrfc2H28S9bSviybwUOawPDB
+2023-12-19 01:40:35,621 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:40:35,624 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-19 01:40:36,211 - 546-- https://api.stripe.com:443 "GET /v1/checkout/sessions/cs_test_a1Yq9kMVwb3i0D20KBnPXwgWWsRwvH6Zmndrfc2H28S9bSviybwUOawPDB HTTP/1.1" 200 2389
+2023-12-19 01:40:36,211 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1Yq9kMVwb3i0D20KBnPXwgWWsRwvH6Zmndrfc2H28S9bSviybwUOawPDB response_code=200
+2023-12-19 01:40:36,212 - 125-- body='{\n  "id": "cs_test_a1Yq9kMVwb3i0D20KBnPXwgWWsRwvH6Zmndrfc2H28S9bSviybwUOawPDB",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 9900,\n  "amount_total": 9900,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702930217,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92Gk1uqTVtSYf",\n  "customer_creation": null,\n  "customer_details": {\n    "address": {\n      "city": null,\n      "country": "IN",\n      "line1": null,\n      "line2": null,\n      "postal_code": null,\n      "state": null\n    },\n    "email": "MUser02@gmail.com",\n    "name": "MyntraUser02",\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": []\n  },\n  "customer_email": null,\n  "expires_at": 1703016617,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "17",\n    "product_quantity": "1",\n    "user_id": "26"\n  },\n  "mode": "payment",\n  "payment_intent": "pi_3OOn8ySCy3EZVvJQ1vFYEweA",\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "paid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "complete",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": null\n}' message='API response body'
+2023-12-19 01:40:36,212 - 125-- link=https://dashboard.stripe.com/test/logs/req_OMYsGNjLQdFoXe message='Dashboard link for request'
+2023-12-19 01:40:36,214 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/customers/cus_P92Gk1uqTVtSYf
+2023-12-19 01:40:36,214 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:40:36,520 - 546-- https://api.stripe.com:443 "GET /v1/customers/cus_P92Gk1uqTVtSYf HTTP/1.1" 200 639
+2023-12-19 01:40:36,521 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers/cus_P92Gk1uqTVtSYf response_code=200
+2023-12-19 01:40:36,521 - 125-- body='{\n  "id": "cus_P92Gk1uqTVtSYf",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1701965570,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "MUser02@gmail.com",\n  "invoice_prefix": "562765C9",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "MyntraUser02",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-19 01:40:36,521 - 125-- link=https://dashboard.stripe.com/test/logs/req_n2j6R86OFPduEX message='Dashboard link for request'
+2023-12-19 01:41:05,855 - 241-- Internal Server Error: /api/survey/17/response
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 609, in product_feedback
+    survey_obj = Survey.objects.get(product=product)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.Survey.DoesNotExist: Survey matching query does not exist.
+2023-12-19 01:43:18,628 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 01:43:21,446 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1062
+2023-12-19 01:43:21,450 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 01:43:22,670 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/516029175/collectors HTTP/1.1" 201 1106
+2023-12-19 01:48:12,270 - 241-- Internal Server Error: /api/survey/17/response
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 609, in product_feedback
+    survey_obj = Survey.objects.get(product=product)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+api.models.Survey.DoesNotExist: Survey matching query does not exist.
+2023-12-19 01:48:33,938 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/checkout/sessions
+2023-12-19 01:48:33,938 - 125-- api_version=2023-10-16 message='Post details' post_data=line_items[0][price_data][currency]=inr&line_items[0][price_data][product_data][name]=Jeans&line_items[0][price_data][product_data][description]=Demo+Jeans&line_items[0][price_data][unit_amount]=9900&line_items[0][quantity]=1&metadata[product_id]=17&metadata[product_quantity]=1&metadata[user_id]=26&mode=payment&customer=cus_P92Gk1uqTVtSYf&success_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-success%2F%7BCHECKOUT_SESSION_ID%7D&cancel_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-failed%2F%7BCHECKOUT_SESSION_ID%7D
+2023-12-19 01:48:33,939 - 292-- Resetting dropped connection: api.stripe.com
+2023-12-19 01:48:35,173 - 546-- https://api.stripe.com:443 "POST /v1/checkout/sessions HTTP/1.1" 200 2578
+2023-12-19 01:48:35,174 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2023-12-19 01:48:35,175 - 125-- body='{\n  "id": "cs_test_a1JCFR2eXZlSOsFoN3faNtDIWJMTdgQ60XFkzpp0Y6JjngGncf3931jKKj",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 9900,\n  "amount_total": 9900,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702930715,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92Gk1uqTVtSYf",\n  "customer_creation": null,\n  "customer_details": {\n    "address": null,\n    "email": "MUser02@gmail.com",\n    "name": null,\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": null\n  },\n  "customer_email": null,\n  "expires_at": 1703017114,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "17",\n    "product_quantity": "1",\n    "user_id": "26"\n  },\n  "mode": "payment",\n  "payment_intent": null,\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "unpaid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "open",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": "https://checkout.stripe.com/c/pay/cs_test_a1JCFR2eXZlSOsFoN3faNtDIWJMTdgQ60XFkzpp0Y6JjngGncf3931jKKj#fidkdWxOYHwnPyd1blpxYHZxWjA0SkNOfE1WRnw2QF9Tc09US3NDQmI9aW5SVU5uX31Pc203NUM8YXVLT25GMWFfQm1cUmtOYFZIPVI1Y2lEUTJPU1UyYlxdSDx0cTB%2FXGgzcnNdNWJtXW1hNTU2bjdyaDE2bCcpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"\n}' message='API response body'
+2023-12-19 01:48:35,175 - 125-- link=https://dashboard.stripe.com/test/logs/req_6hnkpsncwaViAA message='Dashboard link for request'
+2023-12-19 01:48:55,339 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1JCFR2eXZlSOsFoN3faNtDIWJMTdgQ60XFkzpp0Y6JjngGncf3931jKKj
+2023-12-19 01:48:55,340 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:48:55,342 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-19 01:48:56,436 - 546-- https://api.stripe.com:443 "GET /v1/checkout/sessions/cs_test_a1JCFR2eXZlSOsFoN3faNtDIWJMTdgQ60XFkzpp0Y6JjngGncf3931jKKj HTTP/1.1" 200 2389
+2023-12-19 01:48:56,437 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1JCFR2eXZlSOsFoN3faNtDIWJMTdgQ60XFkzpp0Y6JjngGncf3931jKKj response_code=200
+2023-12-19 01:48:56,437 - 125-- body='{\n  "id": "cs_test_a1JCFR2eXZlSOsFoN3faNtDIWJMTdgQ60XFkzpp0Y6JjngGncf3931jKKj",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 9900,\n  "amount_total": 9900,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702930715,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92Gk1uqTVtSYf",\n  "customer_creation": null,\n  "customer_details": {\n    "address": {\n      "city": null,\n      "country": "IN",\n      "line1": null,\n      "line2": null,\n      "postal_code": null,\n      "state": null\n    },\n    "email": "MUser02@gmail.com",\n    "name": "MyntraUser02",\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": []\n  },\n  "customer_email": null,\n  "expires_at": 1703017114,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "17",\n    "product_quantity": "1",\n    "user_id": "26"\n  },\n  "mode": "payment",\n  "payment_intent": "pi_3OOnH2SCy3EZVvJQ0RPEmmtw",\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "paid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "complete",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": null\n}' message='API response body'
+2023-12-19 01:48:56,437 - 125-- link=https://dashboard.stripe.com/test/logs/req_GUxW8OFHmzeEW0 message='Dashboard link for request'
+2023-12-19 01:48:56,439 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/customers/cus_P92Gk1uqTVtSYf
+2023-12-19 01:48:56,439 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:48:56,661 - 546-- https://api.stripe.com:443 "GET /v1/customers/cus_P92Gk1uqTVtSYf HTTP/1.1" 200 639
+2023-12-19 01:48:56,662 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers/cus_P92Gk1uqTVtSYf response_code=200
+2023-12-19 01:48:56,663 - 125-- body='{\n  "id": "cus_P92Gk1uqTVtSYf",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1701965570,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "MUser02@gmail.com",\n  "invoice_prefix": "562765C9",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "MyntraUser02",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-19 01:48:56,663 - 125-- link=https://dashboard.stripe.com/test/logs/req_2Q3YGW82IrfP9z message='Dashboard link for request'
+2023-12-19 01:49:19,981 - 241-- Bad Request: /api/survey/17/response
+2023-12-19 01:50:20,358 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/checkout/sessions
+2023-12-19 01:50:20,358 - 125-- api_version=2023-10-16 message='Post details' post_data=line_items[0][price_data][currency]=inr&line_items[0][price_data][product_data][name]=Sweatshirt&line_items[0][price_data][product_data][description]=Full+Sleeves+Sweatshirt&line_items[0][price_data][unit_amount]=99500&line_items[0][quantity]=1&metadata[product_id]=20&metadata[product_quantity]=1&metadata[user_id]=26&mode=payment&customer=cus_P92Gk1uqTVtSYf&success_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-success%2F%7BCHECKOUT_SESSION_ID%7D&cancel_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-failed%2F%7BCHECKOUT_SESSION_ID%7D
+2023-12-19 01:50:20,359 - 292-- Resetting dropped connection: api.stripe.com
+2023-12-19 01:50:21,354 - 546-- https://api.stripe.com:443 "POST /v1/checkout/sessions HTTP/1.1" 200 2580
+2023-12-19 01:50:21,355 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2023-12-19 01:50:21,355 - 125-- body='{\n  "id": "cs_test_a1QmaTLVvDXyqQjiwEiFiZ3XXaIG0O5SCScpzkhvoVOm8tsh2gp45ujrdZ",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 99500,\n  "amount_total": 99500,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702930821,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92Gk1uqTVtSYf",\n  "customer_creation": null,\n  "customer_details": {\n    "address": null,\n    "email": "MUser02@gmail.com",\n    "name": null,\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": null\n  },\n  "customer_email": null,\n  "expires_at": 1703017221,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "20",\n    "product_quantity": "1",\n    "user_id": "26"\n  },\n  "mode": "payment",\n  "payment_intent": null,\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "unpaid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "open",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": "https://checkout.stripe.com/c/pay/cs_test_a1QmaTLVvDXyqQjiwEiFiZ3XXaIG0O5SCScpzkhvoVOm8tsh2gp45ujrdZ#fidkdWxOYHwnPyd1blpxYHZxWjA0SkNOfE1WRnw2QF9Tc09US3NDQmI9aW5SVU5uX31Pc203NUM8YXVLT25GMWFfQm1cUmtOYFZIPVI1Y2lEUTJPU1UyYlxdSDx0cTB%2FXGgzcnNdNWJtXW1hNTU2bjdyaDE2bCcpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"\n}' message='API response body'
+2023-12-19 01:50:21,355 - 125-- link=https://dashboard.stripe.com/test/logs/req_PECOjJhdtsLJLy message='Dashboard link for request'
+2023-12-19 01:50:38,967 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1QmaTLVvDXyqQjiwEiFiZ3XXaIG0O5SCScpzkhvoVOm8tsh2gp45ujrdZ
+2023-12-19 01:50:38,967 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:50:38,969 - 292-- Resetting dropped connection: api.stripe.com
+2023-12-19 01:50:39,787 - 546-- https://api.stripe.com:443 "GET /v1/checkout/sessions/cs_test_a1QmaTLVvDXyqQjiwEiFiZ3XXaIG0O5SCScpzkhvoVOm8tsh2gp45ujrdZ HTTP/1.1" 200 2391
+2023-12-19 01:50:39,787 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1QmaTLVvDXyqQjiwEiFiZ3XXaIG0O5SCScpzkhvoVOm8tsh2gp45ujrdZ response_code=200
+2023-12-19 01:50:39,788 - 125-- body='{\n  "id": "cs_test_a1QmaTLVvDXyqQjiwEiFiZ3XXaIG0O5SCScpzkhvoVOm8tsh2gp45ujrdZ",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 99500,\n  "amount_total": 99500,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702930821,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92Gk1uqTVtSYf",\n  "customer_creation": null,\n  "customer_details": {\n    "address": {\n      "city": null,\n      "country": "IN",\n      "line1": null,\n      "line2": null,\n      "postal_code": null,\n      "state": null\n    },\n    "email": "MUser02@gmail.com",\n    "name": "MyntraUser02",\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": []\n  },\n  "customer_email": null,\n  "expires_at": 1703017221,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "20",\n    "product_quantity": "1",\n    "user_id": "26"\n  },\n  "mode": "payment",\n  "payment_intent": "pi_3OOnIhSCy3EZVvJQ1b3hooGB",\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "paid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "complete",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": null\n}' message='API response body'
+2023-12-19 01:50:39,788 - 125-- link=https://dashboard.stripe.com/test/logs/req_V7xOP1VOMUzjt7 message='Dashboard link for request'
+2023-12-19 01:50:39,789 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/customers/cus_P92Gk1uqTVtSYf
+2023-12-19 01:50:39,789 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:50:40,051 - 546-- https://api.stripe.com:443 "GET /v1/customers/cus_P92Gk1uqTVtSYf HTTP/1.1" 200 639
+2023-12-19 01:50:40,052 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers/cus_P92Gk1uqTVtSYf response_code=200
+2023-12-19 01:50:40,052 - 125-- body='{\n  "id": "cus_P92Gk1uqTVtSYf",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1701965570,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "MUser02@gmail.com",\n  "invoice_prefix": "562765C9",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "MyntraUser02",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-19 01:50:40,052 - 125-- link=https://dashboard.stripe.com/test/logs/req_Pvatb6OuHl1eUe message='Dashboard link for request'
+2023-12-19 01:50:57,004 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 01:50:58,828 - 546-- https://api.surveymonkey.com:443 "GET /v3/collectors/454424287 HTTP/1.1" 200 None
+2023-12-19 01:54:01,928 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/checkout/sessions
+2023-12-19 01:54:01,928 - 125-- api_version=2023-10-16 message='Post details' post_data=line_items[0][price_data][currency]=inr&line_items[0][price_data][product_data][name]=Sweatshirt&line_items[0][price_data][product_data][description]=Full+Sleeves+Sweatshirt&line_items[0][price_data][unit_amount]=99500&line_items[0][quantity]=1&metadata[product_id]=20&metadata[product_quantity]=1&metadata[user_id]=26&mode=payment&customer=cus_P92Gk1uqTVtSYf&success_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-success%2F%7BCHECKOUT_SESSION_ID%7D&cancel_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-failed%2F%7BCHECKOUT_SESSION_ID%7D
+2023-12-19 01:54:01,929 - 292-- Resetting dropped connection: api.stripe.com
+2023-12-19 01:54:02,834 - 546-- https://api.stripe.com:443 "POST /v1/checkout/sessions HTTP/1.1" 200 2580
+2023-12-19 01:54:02,835 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2023-12-19 01:54:02,835 - 125-- body='{\n  "id": "cs_test_a1hhKBwC9OkHuP8ZI41Qj8LzS6J9mY7M3Tc84sLA1h8aaLjZmlB8GY6wqW",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 99500,\n  "amount_total": 99500,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702931042,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92Gk1uqTVtSYf",\n  "customer_creation": null,\n  "customer_details": {\n    "address": null,\n    "email": "MUser02@gmail.com",\n    "name": null,\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": null\n  },\n  "customer_email": null,\n  "expires_at": 1703017442,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "20",\n    "product_quantity": "1",\n    "user_id": "26"\n  },\n  "mode": "payment",\n  "payment_intent": null,\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "unpaid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "open",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": "https://checkout.stripe.com/c/pay/cs_test_a1hhKBwC9OkHuP8ZI41Qj8LzS6J9mY7M3Tc84sLA1h8aaLjZmlB8GY6wqW#fidkdWxOYHwnPyd1blpxYHZxWjA0SkNOfE1WRnw2QF9Tc09US3NDQmI9aW5SVU5uX31Pc203NUM8YXVLT25GMWFfQm1cUmtOYFZIPVI1Y2lEUTJPU1UyYlxdSDx0cTB%2FXGgzcnNdNWJtXW1hNTU2bjdyaDE2bCcpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"\n}' message='API response body'
+2023-12-19 01:54:02,835 - 125-- link=https://dashboard.stripe.com/test/logs/req_3vuFTgl5Jdshyl message='Dashboard link for request'
+2023-12-19 01:54:21,896 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1hhKBwC9OkHuP8ZI41Qj8LzS6J9mY7M3Tc84sLA1h8aaLjZmlB8GY6wqW
+2023-12-19 01:54:21,896 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:54:21,899 - 292-- Resetting dropped connection: api.stripe.com
+2023-12-19 01:54:23,622 - 546-- https://api.stripe.com:443 "GET /v1/checkout/sessions/cs_test_a1hhKBwC9OkHuP8ZI41Qj8LzS6J9mY7M3Tc84sLA1h8aaLjZmlB8GY6wqW HTTP/1.1" 200 2391
+2023-12-19 01:54:23,623 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1hhKBwC9OkHuP8ZI41Qj8LzS6J9mY7M3Tc84sLA1h8aaLjZmlB8GY6wqW response_code=200
+2023-12-19 01:54:23,623 - 125-- body='{\n  "id": "cs_test_a1hhKBwC9OkHuP8ZI41Qj8LzS6J9mY7M3Tc84sLA1h8aaLjZmlB8GY6wqW",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 99500,\n  "amount_total": 99500,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702931042,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92Gk1uqTVtSYf",\n  "customer_creation": null,\n  "customer_details": {\n    "address": {\n      "city": null,\n      "country": "IN",\n      "line1": null,\n      "line2": null,\n      "postal_code": null,\n      "state": null\n    },\n    "email": "MUser02@gmail.com",\n    "name": "MyntraUser02",\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": []\n  },\n  "customer_email": null,\n  "expires_at": 1703017442,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "20",\n    "product_quantity": "1",\n    "user_id": "26"\n  },\n  "mode": "payment",\n  "payment_intent": "pi_3OOnMHSCy3EZVvJQ0JUbpkEV",\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "paid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "complete",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": null\n}' message='API response body'
+2023-12-19 01:54:23,623 - 125-- link=https://dashboard.stripe.com/test/logs/req_SCmMMJb9SguBEa message='Dashboard link for request'
+2023-12-19 01:54:23,625 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/customers/cus_P92Gk1uqTVtSYf
+2023-12-19 01:54:23,625 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:54:24,017 - 546-- https://api.stripe.com:443 "GET /v1/customers/cus_P92Gk1uqTVtSYf HTTP/1.1" 200 639
+2023-12-19 01:54:24,018 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers/cus_P92Gk1uqTVtSYf response_code=200
+2023-12-19 01:54:24,018 - 125-- body='{\n  "id": "cus_P92Gk1uqTVtSYf",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1701965570,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "MUser02@gmail.com",\n  "invoice_prefix": "562765C9",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "MyntraUser02",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-19 01:54:24,018 - 125-- link=https://dashboard.stripe.com/test/logs/req_OujrSPgNIU8AiP message='Dashboard link for request'
+2023-12-19 01:54:32,439 - 241-- Bad Request: /api/survey/20/response
+2023-12-19 01:55:22,684 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/checkout/sessions
+2023-12-19 01:55:22,684 - 125-- api_version=2023-10-16 message='Post details' post_data=line_items[0][price_data][currency]=inr&line_items[0][price_data][product_data][name]=Sweatshirt&line_items[0][price_data][product_data][description]=Full+Sleeves+Sweatshirt&line_items[0][price_data][unit_amount]=99500&line_items[0][quantity]=1&metadata[product_id]=20&metadata[product_quantity]=1&metadata[user_id]=26&mode=payment&customer=cus_P92Gk1uqTVtSYf&success_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-success%2F%7BCHECKOUT_SESSION_ID%7D&cancel_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-failed%2F%7BCHECKOUT_SESSION_ID%7D
+2023-12-19 01:55:22,685 - 292-- Resetting dropped connection: api.stripe.com
+2023-12-19 01:55:23,423 - 546-- https://api.stripe.com:443 "POST /v1/checkout/sessions HTTP/1.1" 200 2580
+2023-12-19 01:55:23,424 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2023-12-19 01:55:23,424 - 125-- body='{\n  "id": "cs_test_a1CjAisKXWsWHmsGYF11DZ8yjxIRJjlIhoWoZ9jLus1urAJ9gG0kW2QCTK",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 99500,\n  "amount_total": 99500,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702931123,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92Gk1uqTVtSYf",\n  "customer_creation": null,\n  "customer_details": {\n    "address": null,\n    "email": "MUser02@gmail.com",\n    "name": null,\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": null\n  },\n  "customer_email": null,\n  "expires_at": 1703017523,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "20",\n    "product_quantity": "1",\n    "user_id": "26"\n  },\n  "mode": "payment",\n  "payment_intent": null,\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "unpaid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "open",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": "https://checkout.stripe.com/c/pay/cs_test_a1CjAisKXWsWHmsGYF11DZ8yjxIRJjlIhoWoZ9jLus1urAJ9gG0kW2QCTK#fidkdWxOYHwnPyd1blpxYHZxWjA0SkNOfE1WRnw2QF9Tc09US3NDQmI9aW5SVU5uX31Pc203NUM8YXVLT25GMWFfQm1cUmtOYFZIPVI1Y2lEUTJPU1UyYlxdSDx0cTB%2FXGgzcnNdNWJtXW1hNTU2bjdyaDE2bCcpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"\n}' message='API response body'
+2023-12-19 01:55:23,424 - 125-- link=https://dashboard.stripe.com/test/logs/req_XwPiZiBJAnowQ1 message='Dashboard link for request'
+2023-12-19 01:55:43,192 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1CjAisKXWsWHmsGYF11DZ8yjxIRJjlIhoWoZ9jLus1urAJ9gG0kW2QCTK
+2023-12-19 01:55:43,192 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:55:43,194 - 292-- Resetting dropped connection: api.stripe.com
+2023-12-19 01:55:44,051 - 546-- https://api.stripe.com:443 "GET /v1/checkout/sessions/cs_test_a1CjAisKXWsWHmsGYF11DZ8yjxIRJjlIhoWoZ9jLus1urAJ9gG0kW2QCTK HTTP/1.1" 200 2391
+2023-12-19 01:55:44,052 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1CjAisKXWsWHmsGYF11DZ8yjxIRJjlIhoWoZ9jLus1urAJ9gG0kW2QCTK response_code=200
+2023-12-19 01:55:44,052 - 125-- body='{\n  "id": "cs_test_a1CjAisKXWsWHmsGYF11DZ8yjxIRJjlIhoWoZ9jLus1urAJ9gG0kW2QCTK",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 99500,\n  "amount_total": 99500,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702931123,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92Gk1uqTVtSYf",\n  "customer_creation": null,\n  "customer_details": {\n    "address": {\n      "city": null,\n      "country": "IN",\n      "line1": null,\n      "line2": null,\n      "postal_code": null,\n      "state": null\n    },\n    "email": "MUser02@gmail.com",\n    "name": "MyntraUser02",\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": []\n  },\n  "customer_email": null,\n  "expires_at": 1703017523,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "20",\n    "product_quantity": "1",\n    "user_id": "26"\n  },\n  "mode": "payment",\n  "payment_intent": "pi_3OOnNbSCy3EZVvJQ0gwfP1tE",\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "paid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "complete",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": null\n}' message='API response body'
+2023-12-19 01:55:44,052 - 125-- link=https://dashboard.stripe.com/test/logs/req_h9IVIGMnjxvV5f message='Dashboard link for request'
+2023-12-19 01:55:44,054 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/customers/cus_P92Gk1uqTVtSYf
+2023-12-19 01:55:44,054 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 01:55:44,416 - 546-- https://api.stripe.com:443 "GET /v1/customers/cus_P92Gk1uqTVtSYf HTTP/1.1" 200 639
+2023-12-19 01:55:44,417 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers/cus_P92Gk1uqTVtSYf response_code=200
+2023-12-19 01:55:44,417 - 125-- body='{\n  "id": "cus_P92Gk1uqTVtSYf",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1701965570,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "MUser02@gmail.com",\n  "invoice_prefix": "562765C9",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "MyntraUser02",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-19 01:55:44,417 - 125-- link=https://dashboard.stripe.com/test/logs/req_7OoYHVGl12HoFd message='Dashboard link for request'
+2023-12-19 01:55:55,296 - 241-- Bad Request: /api/survey/20/response
+2023-12-19 01:56:18,269 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:56:20,649 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:58:53,576 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:58:57,817 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:59:03,087 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:59:07,284 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:59:38,042 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 01:59:46,611 - 241-- Bad Request: /api/survey/20/response
+2023-12-19 01:59:58,700 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:00:06,820 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:00:36,480 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:00:43,035 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 02:00:44,241 - 546-- https://api.surveymonkey.com:443 "GET /v3/collectors/454424287 HTTP/1.1" 200 None
+2023-12-19 02:03:51,036 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:03:55,240 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:03:59,585 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:06:20,527 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 02:06:22,469 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys HTTP/1.1" 201 1068
+2023-12-19 02:06:22,474 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 02:06:24,107 - 546-- https://api.surveymonkey.com:443 "POST /v3/surveys/411055150/collectors HTTP/1.1" 201 1105
+2023-12-19 02:07:59,480 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/checkout/sessions
+2023-12-19 02:07:59,480 - 125-- api_version=2023-10-16 message='Post details' post_data=line_items[0][price_data][currency]=inr&line_items[0][price_data][product_data][name]=Shirt&line_items[0][price_data][product_data][description]=Full+Sleeves+Shirt&line_items[0][price_data][unit_amount]=99500&line_items[0][quantity]=1&metadata[product_id]=21&metadata[product_quantity]=1&metadata[user_id]=25&mode=payment&customer=cus_P92GT9jAX21IeT&success_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-success%2F%7BCHECKOUT_SESSION_ID%7D&cancel_url=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fpayment-failed%2F%7BCHECKOUT_SESSION_ID%7D
+2023-12-19 02:07:59,481 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-19 02:08:00,363 - 546-- https://api.stripe.com:443 "POST /v1/checkout/sessions HTTP/1.1" 200 2580
+2023-12-19 02:08:00,364 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2023-12-19 02:08:00,364 - 125-- body='{\n  "id": "cs_test_a1V2oOBWezWEzSdWpldbcgovrehDUFt1VkZyPKs3s5s5pfl7MBTm2ZqW8Q",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 99500,\n  "amount_total": 99500,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702931880,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92GT9jAX21IeT",\n  "customer_creation": null,\n  "customer_details": {\n    "address": null,\n    "email": "MUser01@gmail.com",\n    "name": null,\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": null\n  },\n  "customer_email": null,\n  "expires_at": 1703018280,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "21",\n    "product_quantity": "1",\n    "user_id": "25"\n  },\n  "mode": "payment",\n  "payment_intent": null,\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "unpaid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "open",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": "https://checkout.stripe.com/c/pay/cs_test_a1V2oOBWezWEzSdWpldbcgovrehDUFt1VkZyPKs3s5s5pfl7MBTm2ZqW8Q#fidkdWxOYHwnPyd1blpxYHZxWjA0SkNOfE1WRnw2QF9Tc09US3NDQmI9aW5SVU5uX31Pc203NUM8YXVLT25GMWFfQm1cUmtOYFZIPVI1Y2lEUTJPU1UyYlxdSDx0cTB%2FXGgzcnNdNWJtXW1hNTU2bjdyaDE2bCcpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"\n}' message='API response body'
+2023-12-19 02:08:00,364 - 125-- link=https://dashboard.stripe.com/test/logs/req_ebdjVHVTTpuZx8 message='Dashboard link for request'
+2023-12-19 02:08:19,425 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1V2oOBWezWEzSdWpldbcgovrehDUFt1VkZyPKs3s5s5pfl7MBTm2ZqW8Q
+2023-12-19 02:08:19,426 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 02:08:19,429 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-19 02:08:20,024 - 546-- https://api.stripe.com:443 "GET /v1/checkout/sessions/cs_test_a1V2oOBWezWEzSdWpldbcgovrehDUFt1VkZyPKs3s5s5pfl7MBTm2ZqW8Q HTTP/1.1" 200 2391
+2023-12-19 02:08:20,025 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1V2oOBWezWEzSdWpldbcgovrehDUFt1VkZyPKs3s5s5pfl7MBTm2ZqW8Q response_code=200
+2023-12-19 02:08:20,025 - 125-- body='{\n  "id": "cs_test_a1V2oOBWezWEzSdWpldbcgovrehDUFt1VkZyPKs3s5s5pfl7MBTm2ZqW8Q",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 99500,\n  "amount_total": 99500,\n  "automatic_tax": {\n    "enabled": false,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "http://127.0.0.1:8000/api/payment-failed/{CHECKOUT_SESSION_ID}",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1702931880,\n  "currency": "inr",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": "cus_P92GT9jAX21IeT",\n  "customer_creation": null,\n  "customer_details": {\n    "address": {\n      "city": null,\n      "country": "IN",\n      "line1": null,\n      "line2": null,\n      "postal_code": null,\n      "state": null\n    },\n    "email": "MUser01@gmail.com",\n    "name": "MyntraUser01",\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": []\n  },\n  "customer_email": null,\n  "expires_at": 1703018280,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {\n    "product_id": "21",\n    "product_quantity": "1",\n    "user_id": "25"\n  },\n  "mode": "payment",\n  "payment_intent": "pi_3OOnZoSCy3EZVvJQ1T4ksaTW",\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "paid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "complete",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "http://127.0.0.1:8000/api/payment-success/{CHECKOUT_SESSION_ID}",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": null\n}' message='API response body'
+2023-12-19 02:08:20,025 - 125-- link=https://dashboard.stripe.com/test/logs/req_cl81gTZs8EPbQv message='Dashboard link for request'
+2023-12-19 02:08:20,027 - 132-- message='Request to Stripe api' method=get path=https://api.stripe.com/v1/customers/cus_P92GT9jAX21IeT
+2023-12-19 02:08:20,027 - 125-- api_version=2023-10-16 message='Post details' post_data=
+2023-12-19 02:08:20,336 - 546-- https://api.stripe.com:443 "GET /v1/customers/cus_P92GT9jAX21IeT HTTP/1.1" 200 639
+2023-12-19 02:08:20,337 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers/cus_P92GT9jAX21IeT response_code=200
+2023-12-19 02:08:20,337 - 125-- body='{\n  "id": "cus_P92GT9jAX21IeT",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1701965561,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "MUser01@gmail.com",\n  "invoice_prefix": "C0EEC810",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "MyntraUser01",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-19 02:08:20,337 - 125-- link=https://dashboard.stripe.com/test/logs/req_ttwevunqbeH6Fc message='Dashboard link for request'
+2023-12-19 02:09:15,164 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 02:09:16,343 - 546-- https://api.surveymonkey.com:443 "GET /v3/collectors/429353346 HTTP/1.1" 200 None
+2023-12-19 02:09:30,575 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 02:09:32,011 - 546-- https://api.surveymonkey.com:443 "GET /v3/collectors/429353346 HTTP/1.1" 200 None
+2023-12-19 02:14:48,208 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 02:14:49,448 - 546-- https://api.surveymonkey.com:443 "POST /oauth/token HTTP/1.1" 400 66
+2023-12-19 02:17:10,883 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 02:17:11,903 - 546-- https://api.surveymonkey.com:443 "POST /oauth/token HTTP/1.1" 200 None
+2023-12-19 02:29:11,958 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 02:29:16,185 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 02:29:47,983 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 02:29:50,115 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-19 02:30:06,514 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:30:08,687 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:30:16,972 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:30:29,902 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:30:34,074 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:30:38,295 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:33:51,543 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:33:53,743 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:33:59,916 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:34:05,149 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:35:05,460 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:35:08,670 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:35:18,067 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:35:22,342 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:36:14,598 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:36:19,863 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:36:25,060 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:36:31,487 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:36:41,337 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:37:11,091 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:37:13,342 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:37:17,538 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:37:21,324 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:37:25,476 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:37:38,783 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:37:44,036 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:37:46,286 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:37:54,342 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:37:59,505 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:38:01,671 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:38:07,791 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:38:25,136 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:38:36,060 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:38:40,272 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:38:46,219 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:38:48,398 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:38:59,604 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:39:18,122 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:39:21,389 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:39:33,238 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:39:35,339 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:39:37,478 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:39:40,769 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:39:43,921 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:39:54,701 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:40:13,751 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:40:31,178 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:40:40,752 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:40:47,061 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:40:49,242 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:40:59,626 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:41:02,849 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:41:06,969 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:41:10,116 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:41:22,386 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:42:01,859 - 241-- Method Not Allowed: /api/survey/21/response
+2023-12-19 02:42:11,552 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:42:16,207 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 02:42:17,458 - 546-- https://api.surveymonkey.com:443 "GET /v3/surveys/3 HTTP/1.1" 404 212
+2023-12-19 02:42:35,279 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:42:46,447 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 02:42:47,879 - 546-- https://api.surveymonkey.com:443 "GET /v3/surveys/3 HTTP/1.1" 404 212
+2023-12-19 02:44:27,116 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:44:29,308 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:44:35,548 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 02:44:37,031 - 546-- https://api.surveymonkey.com:443 "GET /v3/surveys/411055150 HTTP/1.1" 200 None
+2023-12-19 02:47:14,138 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-19 02:47:16,261 - 546-- https://api.surveymonkey.com:443 "GET /v3/surveys/516029175 HTTP/1.1" 200 None
+2023-12-19 02:53:38,611 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:53:43,808 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:53:49,986 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:53:55,745 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:54:11,649 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:57:09,442 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:57:22,425 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:57:31,747 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:57:35,873 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:57:39,097 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:57:47,319 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:57:54,501 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 02:59:19,887 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:00:12,953 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:00:16,165 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:01:04,260 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:01:06,372 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:01:30,405 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:01:34,574 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:01:38,839 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:02:02,667 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:02:08,941 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:02:20,182 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:02:31,461 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:02:35,708 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:02:43,935 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:02:46,147 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:02:50,330 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:04:03,613 - 241-- Internal Server Error: /api/survey/20/response
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 625, in product_feedback
+    user = CustomUser.objects.get(user=user)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1464, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1275, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1252, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "MyntraUser01": Must be "User" instance.
+2023-12-19 03:04:34,634 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:04:39,861 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:04:43,624 - 241-- Internal Server Error: /api/survey/20/response
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 626, in product_feedback
+    if request.user.is_super_user and user.account==product.account:
+AttributeError: 'User' object has no attribute 'is_super_user'
+2023-12-19 03:05:02,527 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:05:07,242 - 241-- Not Found: /api/survey/20/response
+2023-12-19 03:08:52,657 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:08:54,894 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:09:22,747 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:09:26,041 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:09:28,235 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:09:30,376 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:09:38,683 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:09:52,107 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:09:54,227 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:09:59,476 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:10:02,830 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:10:08,032 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:10:11,211 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:10:14,393 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:10:24,646 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-19 03:10:39,646 - 241-- Forbidden: /api/survey/20/response
