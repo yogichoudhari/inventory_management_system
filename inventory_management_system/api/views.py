@@ -77,17 +77,18 @@ def register_admin(request):
             created_user_instance.stripe_id = customer_stripe_response.id
             created_user_instance.save()
             send_otp_via_email(created_user_instance)
-            return Response({'status':'success',
+            return Response({'status':STATUS_SUCCESS,
                              'message':'An email is sent for verification'},
                             status=status.HTTP_201_CREATED)
-        else:   
+        else:
             return Response({"status":STATUS_FAILED,
-                             "message":serialized.errors},
+                             "error":f"{serialized.errors}"},
                             status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(["POST","GET"])
 @permission_classes([IsAuthenticated,IsAdminUser])
 def create_user(request):
+    pdb.set_trace()
     if request.method=="GET":
         states = [state for state,_ in state_choices]
         city = [{state:[c[0] for c in city] for state,city in cities}]
@@ -113,7 +114,7 @@ def create_user(request):
                             status=status.HTTP_201_CREATED)
         else:   
             return Response({"status":STATUS_FAILED,
-                             "message":serialized.errors},
+                             "error":serialized.errors},
                             status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(["POST"])
@@ -184,7 +185,7 @@ def login(request):
                                  "token":token},
                                 content_type='application/json')
             else:
-                return Response({'status':STATUS_FAILED,'error':"user not varified"},
+                return Response({'status':STATUS_FAILED,'error':"user not varified", 'error': f"{error}"},
                                 status=status.HTTP_403_FORBIDDEN)
         elif username=='admin':
                 auth.login(request,user)
@@ -423,7 +424,7 @@ def add_product(request):
               {
             "headings": [
                 {
-                    "heading": "which star would you like to give this product??"
+                    "heading": f"which star would you like to give {product.brand} {product.title}?"
                 }
             ],
             "position": 1,
@@ -626,11 +627,25 @@ def product_feedback(request,product_id):
         if request.user.is_superuser and user.account==product.account:
             survey_obj = Survey.objects.get(product=product)
             survey_id = survey_obj.survey_id
-            endpoint_url = f"/v3/surveys/{survey_id}"
+            endpoint_url = f"/v3/surveys/{survey_id}/trends"
             url = SM_API_BASE + endpoint_url
             survey_res = requests.get(url=url,headers=headers)
-            analyze_url = survey_res.json().get("analyze_url")
-            return Response({"status":STATUS_SUCCESS,"url":analyze_url},
+            survey_data = survey_res.json()
+            total_responses = survey_data["data"][0]["trends"][0]["rows"][0].get("total")
+            survey_ans_list = survey_data["data"][0]["trends"][0]["rows"][0].get("choices")
+            survey_ans_dict = {str(i):survey_ans_list[i-1]["count"] for i in range(1,len(survey_ans_list)+1)}
+            response_dict = {}
+            def average_res(d):
+                total_response_count = 0
+                counter = 1
+                for _,v in d.items():
+                    total_response_count+=int(counter)*int(v)
+                    response_dict[f"{counter}_star"] = v
+                    counter+=1
+                return total_response_count/total_responses
+            response_dict["average_response"] = average_res(survey_ans_dict)
+            response_dict["total_response"] = total_responses
+            return Response({"status":STATUS_SUCCESS,"data":response_dict},
                             status=status.HTTP_200_OK)
         elif not request.user.is_superuser:
             return Response({"status":STATUS_FAILED,"error":"user does not have permission"},

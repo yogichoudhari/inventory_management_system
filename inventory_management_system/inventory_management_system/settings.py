@@ -26,7 +26,7 @@ SECRET_KEY = config("SECRET_KEY")
 DEBUG = config("DEBUG")
 
 ALLOWED_HOSTS = []
-
+CORS_ALLOWED_ORIGINS = ['*']
 
 # Application definition
 
@@ -41,9 +41,11 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     'api',
     'survey'
+
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
