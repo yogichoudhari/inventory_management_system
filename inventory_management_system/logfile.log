@@ -3738,3 +3738,10 @@ bdb.BdbQuit
 2023-12-20 03:45:27,669 - 241-- Unauthorized: /api/create-user/
 2023-12-20 03:46:00,060 - 241-- Bad Request: /api/register/
 2023-12-20 04:11:19,749 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-20 19:14:20,470 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-20 19:14:22,203 - 546-- https://api.surveymonkey.com:443 "GET /v3/surveys/516039645/trends HTTP/1.1" 200 687
+2023-12-20 19:15:40,856 - 241-- Unauthorized: /api/survey/22/response
+2023-12-20 19:16:19,063 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-20 19:16:20,221 - 546-- https://api.surveymonkey.com:443 "GET /v3/collectors/454438468 HTTP/1.1" 200 None
+2023-12-20 19:20:44,901 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-20 19:20:46,734 - 546-- https://api.surveymonkey.com:443 "GET /v3/surveys/516039645/trends HTTP/1.1" 200 687
