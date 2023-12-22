@@ -3745,3 +3745,589 @@ bdb.BdbQuit
 2023-12-20 19:16:20,221 - 546-- https://api.surveymonkey.com:443 "GET /v3/collectors/454438468 HTTP/1.1" 200 None
 2023-12-20 19:20:44,901 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
 2023-12-20 19:20:46,734 - 546-- https://api.surveymonkey.com:443 "GET /v3/surveys/516039645/trends HTTP/1.1" 200 687
+2023-12-20 22:53:23,425 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/survey/views.py changed, reloading.
+2023-12-20 22:55:16,509 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-20 22:55:16,509 - 125-- api_version=2023-10-16 message='Post details' post_data=name=Meesho&email=Meesho%40gmail.com
+2023-12-20 22:55:16,511 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-20 22:55:17,032 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 632
+2023-12-20 22:55:17,033 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-20 22:55:17,033 - 125-- body='{\n  "id": "cus_PDvMLN2awTeeRu",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1703093116,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "Meesho@gmail.com",\n  "invoice_prefix": "8962D777",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "Meesho",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-20 22:55:17,033 - 125-- link=https://dashboard.stripe.com/test/logs/req_BgAAhRtK34PiG6 message='Dashboard link for request'
+2023-12-20 22:56:00,104 - 1052-- Starting new HTTPS connection (1): api.surveymonkey.com:443
+2023-12-20 22:56:01,782 - 546-- https://api.surveymonkey.com:443 "GET /v3/surveys/516039645/trends HTTP/1.1" 200 687
+2023-12-21 01:06:23,339 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:07:50,326 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:07:52,552 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:08:42,050 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:08:47,369 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:08:54,081 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:14:11,502 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:14:17,752 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:15:52,956 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:18:14,189 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:18:23,529 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:18:27,721 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:18:31,005 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 01:24:09,054 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 02:08:28,289 - 241-- Bad Request: /api/register/
+2023-12-21 02:08:58,561 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/inventory_management_system/settings.py changed, reloading.
+2023-12-21 21:11:32,887 - 241-- Not Found: /
+2023-12-21 21:11:32,960 - 241-- Not Found: /favicon.ico
+2023-12-21 21:29:00,950 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:29:04,097 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:29:28,450 - 241-- Unauthorized: /api/create-permission-set/
+2023-12-21 21:29:36,139 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:30:08,192 - 241-- Bad Request: /api/create-permission-set/
+2023-12-21 21:32:03,837 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/admin.py changed, reloading.
+2023-12-21 21:32:10,188 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/admin.py changed, reloading.
+2023-12-21 21:32:15,351 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/admin.py changed, reloading.
+2023-12-21 21:33:30,300 - 241-- Unauthorized: /api/grant-permission/
+2023-12-21 21:33:48,610 - 241-- Bad Request: /api/grant-permission/
+2023-12-21 21:34:15,604 - 241-- Bad Request: /api/grant-permission/
+2023-12-21 21:35:09,503 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:35:25,060 - 241-- Internal Server Error: /api/grant-permission/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 225, in grant_permission_to_user
+    permission_instance = Permission.objects.get(permission_set=permission_set,
+UnboundLocalError: local variable 'permission_set' referenced before assignment
+2023-12-21 21:36:56,291 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:37:19,018 - 241-- Internal Server Error: /api/grant-permission/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 225, in grant_permission_to_user
+    permission_instance = Permission.objects.get(permission_set=permission_set,
+UnboundLocalError: local variable 'permission_set' referenced before assignment
+2023-12-21 21:37:31,289 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:39:35,536 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:39:39,050 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:39:42,498 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:39:44,881 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:45:11,839 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:45:15,096 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:45:22,728 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:45:26,104 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:45:36,226 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:45:39,648 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:45:41,943 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:45:50,323 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:45:56,964 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:46:08,372 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:47:24,174 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:47:28,770 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:47:36,320 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:47:39,090 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:47:42,675 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:47:50,042 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 21:51:57,925 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:04:52,749 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:04:55,803 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:05:00,420 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:05:08,811 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:05:16,206 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:05:29,770 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:05:58,940 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:08:11,180 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:09:43,072 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:19:44,083 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:22:02,148 - 241-- Internal Server Error: /api/grant-permission/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 204, in grant_permission_to_user
+    try:
+UnboundLocalError: local variable 'permission_instance' referenced before assignment
+2023-12-21 22:39:14,681 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:39:23,026 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:39:30,309 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:39:32,594 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:39:37,775 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:39:40,065 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:39:45,272 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:39:59,692 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:40:07,258 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:40:24,681 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:40:31,941 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 22:47:37,058 - 241-- Internal Server Error: /api/grant-permission/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 211, in grant_permission_to_user
+    permissions = user_instance.permission.all()
+AttributeError: 'QuerySet' object has no attribute 'permission'
+2023-12-21 22:48:00,143 - 241-- Internal Server Error: /api/grant-permission/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 211, in grant_permission_to_user
+    permissions = user_instance.permission.all()
+AttributeError: 'QuerySet' object has no attribute 'permission'
+2023-12-21 22:48:36,493 - 241-- Internal Server Error: /api/grant-permission/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 211, in grant_permission_to_user
+    permissions = user_instance.permission.all()
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 211, in grant_permission_to_user
+    permissions = user_instance.permission.all()
+  File "/usr/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+2023-12-21 22:51:38,278 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/models.py changed, reloading.
+2023-12-21 22:52:27,422 - 241-- Internal Server Error: /api/grant-permission/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 211, in grant_permission_to_user
+    permissions = user_instance.permission.all()
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 211, in grant_permission_to_user
+    permissions = user_instance.permission.all()
+  File "/usr/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+2023-12-21 23:04:41,744 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/models.py changed, reloading.
+2023-12-21 23:09:06,651 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/models.py changed, reloading.
+2023-12-21 23:12:46,648 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/admin.py changed, reloading.
+2023-12-21 23:15:01,915 - 241-- Unauthorized: /api/grant-permission/
+2023-12-21 23:17:56,964 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 23:24:39,488 - 241-- Internal Server Error: /api/grant-permission/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 229, in grant_permission_to_user
+    user_instance.permission.set([permission_instance])
+AttributeError: 'User' object has no attribute 'permission'
+2023-12-21 23:32:55,890 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 23:33:24,671 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 23:36:25,710 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 23:36:58,487 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 23:38:16,595 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-21 23:39:01,658 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:00:25,370 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:00:34,652 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:00:42,444 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:00:50,164 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:01:18,322 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:01:20,391 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:03:13,928 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:03:32,335 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:03:39,589 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:15:06,874 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:15:16,755 - 241-- Unauthorized: /api/grant-permission/
+2023-12-22 00:35:54,314 - 241-- Bad Request: /api/grant-permission/
+2023-12-22 00:42:31,649 - 241-- Internal Server Error: /api/grant-permission/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 214, in grant_permission_to_user
+    permission_set = permission_instance.permission_set
+AttributeError: 'QuerySet' object has no attribute 'permission_set'
+2023-12-22 00:55:48,763 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 00:55:50,949 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:04:11,102 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:08:40,800 - 241-- Internal Server Error: /api/grant-permission/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 2053, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 227, in grant_permission_to_user
+    user_instance.permissions.add([permission_instance])
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 1137, in add
+    self._add_items(
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 1397, in _add_items
+    target_ids = self._get_target_ids(target_field_name, objs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 1331, in _get_target_ids
+    target_ids.add(target_field.get_prep_value(obj))
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/fields/related.py", line 1135, in get_prep_value
+    return self.target_field.get_prep_value(value)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got [<Permission: {'can_update': True}_User>].
+2023-12-22 01:09:37,575 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:09:43,363 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:09:45,557 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:19:42,096 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:46:47,550 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:46:55,818 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:47:02,043 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:47:04,143 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:50:22,566 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:50:25,695 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:50:33,029 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:50:38,329 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:51:42,176 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:51:54,647 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:52:07,448 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:52:11,767 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:52:26,046 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:53:09,070 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 01:53:31,384 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 02:06:59,262 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 02:07:02,449 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 02:09:57,415 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 02:50:49,834 - 241-- Unauthorized: /api/product/
+2023-12-22 19:44:54,224 - 241-- Not Found: /api/product/11
+2023-12-22 19:45:16,400 - 241-- Not Found: /api/product/11
+2023-12-22 19:45:34,621 - 241-- Not Found: /api/product/20
+2023-12-22 19:45:50,904 - 241-- Not Found: /api/produc
+2023-12-22 19:46:08,159 - 241-- Not Found: /api/products/12
+2023-12-22 20:20:50,880 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:20:54,282 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:20:56,478 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:21:02,627 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:21:07,790 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:34:29,382 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:41:37,406 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:41:44,597 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:41:48,742 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:41:52,975 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:42:07,135 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:42:10,358 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:43:08,534 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:43:10,697 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:45:37,962 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:47:31,120 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:47:42,416 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:47:55,743 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:48:12,136 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:48:28,646 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:48:38,953 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:48:50,310 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:48:59,718 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:49:43,217 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:49:46,383 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:49:54,710 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:49:58,870 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:50:03,060 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:50:15,364 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:51:16,762 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:51:23,925 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:51:30,168 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:51:37,553 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/utility_functions.py changed, reloading.
+2023-12-22 20:51:57,163 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:52:03,400 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:52:36,728 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:52:40,940 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:53:13,405 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:54:16,914 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:54:56,282 - 241-- Bad Request: /api/register/
+2023-12-22 20:55:11,097 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-22 20:55:11,097 - 125-- api_version=2023-10-16 message='Post details' post_data=name=BigBasket&email=Bigbasket%40gmail.com
+2023-12-22 20:55:11,098 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-22 20:55:11,808 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 638
+2023-12-22 20:55:11,809 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-22 20:55:11,809 - 125-- body='{\n  "id": "cus_PEdsBKURCB3geY",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1703258711,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "Bigbasket@gmail.com",\n  "invoice_prefix": "CC96D9FA",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "BigBasket",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-22 20:55:11,809 - 125-- link=https://dashboard.stripe.com/test/logs/req_Z19fOSfo7T3XVi message='Dashboard link for request'
+2023-12-22 20:55:16,208 - 241-- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py", line 80, in register_admin
+    return Response(STATUS_SUCCESS,message='An email is sent for verification',
+TypeError: __init__() got an unexpected keyword argument 'message'
+2023-12-22 20:55:54,501 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:56:10,072 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:56:14,317 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:56:29,463 - 241-- Bad Request: /api/register/
+2023-12-22 20:57:00,716 - 241-- Not Found: /favicon.ico
+2023-12-22 20:57:03,457 - 241-- Not Found: /favicon.ico
+2023-12-22 20:57:27,736 - 132-- message='Request to Stripe api' method=post path=https://api.stripe.com/v1/customers
+2023-12-22 20:57:27,736 - 125-- api_version=2023-10-16 message='Post details' post_data=name=BigBasket&email=Bigbasket%40gmail.com
+2023-12-22 20:57:27,740 - 1052-- Starting new HTTPS connection (1): api.stripe.com:443
+2023-12-22 20:57:28,305 - 546-- https://api.stripe.com:443 "POST /v1/customers HTTP/1.1" 200 638
+2023-12-22 20:57:28,305 - 132-- message='Stripe API response' path=https://api.stripe.com/v1/customers response_code=200
+2023-12-22 20:57:28,305 - 125-- body='{\n  "id": "cus_PEdvA4t3ploazG",\n  "object": "customer",\n  "address": null,\n  "balance": 0,\n  "created": 1703258848,\n  "currency": null,\n  "default_source": null,\n  "delinquent": false,\n  "description": null,\n  "discount": null,\n  "email": "Bigbasket@gmail.com",\n  "invoice_prefix": "CC68E01D",\n  "invoice_settings": {\n    "custom_fields": null,\n    "default_payment_method": null,\n    "footer": null,\n    "rendering_options": null\n  },\n  "livemode": false,\n  "metadata": {},\n  "name": "BigBasket",\n  "next_invoice_sequence": 1,\n  "phone": null,\n  "preferred_locales": [],\n  "shipping": null,\n  "tax_exempt": "none",\n  "test_clock": null\n}' message='API response body'
+2023-12-22 20:57:28,305 - 125-- link=https://dashboard.stripe.com/test/logs/req_0k0phNDNCvZ35r message='Dashboard link for request'
+2023-12-22 20:58:19,497 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:58:52,237 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 20:58:54,717 - 241-- Bad Request: /api/register/
+2023-12-22 21:00:06,184 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:00:11,531 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:00:23,077 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:00:27,449 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:03:29,658 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:04:25,805 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:05:07,883 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:05:29,968 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:05:38,434 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:06:07,022 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:06:56,419 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:09:00,824 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:09:29,616 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:09:59,909 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:10:26,926 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:10:53,800 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:11:07,420 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:11:09,826 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:11:15,316 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:11:40,109 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:11:47,539 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:11:51,888 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:12:05,347 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:12:34,690 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:13:04,166 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:13:07,576 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:13:10,940 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:13:14,377 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:13:16,681 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:13:46,498 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:13:52,103 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:14:00,563 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:14:40,223 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:14:42,555 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:14:58,676 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:15:01,100 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:15:06,404 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:15:08,867 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:15:15,140 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:16:10,622 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:16:34,365 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:16:43,826 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:25:22,779 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:25:38,359 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:25:59,894 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:26:16,470 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:26:31,198 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:27:11,268 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:27:38,995 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:27:55,573 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:28:08,187 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:28:45,038 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:28:49,408 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:28:52,741 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:29:14,100 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:30:09,539 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:31:13,342 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:31:23,998 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:31:30,373 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:31:34,777 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:31:55,445 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:32:19,810 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:32:41,690 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:33:38,794 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:34:59,323 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:36:13,694 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:36:41,880 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:36:59,201 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:38:05,876 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:39:03,391 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:39:10,825 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:40:36,953 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:44:07,471 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:44:30,298 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:44:51,936 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:45:21,792 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:45:45,485 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:46:13,700 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:46:40,103 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:47:52,625 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:48:19,851 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:48:46,893 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:49:27,115 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:49:33,195 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:50:52,733 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:51:19,860 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:51:36,722 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 21:54:21,891 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-22 21:54:24,298 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/urls.py changed, reloading.
+2023-12-22 21:54:41,910 - 241-- Not Found: /api/products/12
+2023-12-22 22:00:02,284 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 22:08:34,251 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 22:09:00,551 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 22:09:03,901 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 22:09:29,612 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 22:09:32,886 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 22:10:38,528 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 22:10:54,150 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 22:11:01,731 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 22:11:03,928 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 22:12:31,060 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.
+2023-12-22 22:22:09,021 - 266-- /home/dell/Desktop/python training/Django Rest Framework/project03/inventory_management_system/api/views.py changed, reloading.

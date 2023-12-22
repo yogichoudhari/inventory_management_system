@@ -29,7 +29,7 @@ from django.core.cache import cache
 import random
 from django.core.mail import send_mail
 from .utility_functions import (get_tokens_for_user, generate_otp, otp_temp_storage,
-                                send_email,send_otp_via_email)
+                                send_email,send_otp_via_email,response_template)
 import logging
 import requests
 # for views responses
@@ -52,19 +52,12 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 stripe.api_key = config("STRIPE_SECRET_KEY")
 
-@api_view(['POST',"GET"])
+@api_view(['POST'])
 def register_admin(request):
     '''This view function is being used by the admin user to 
     
     register the new user
     '''
-    if request.method=="GET":
-        states = [state for state,_ in state_choices]
-        city = [{state:[c[0] for c in city] for state,city in cities}]
-        data = {"states":states,
-                "cities":city}
-        return Response({"status":STATUS_SUCCESS,"data":data},
-                        status=status.HTTP_200_OK)
     if request.method=="POST":
         user_data = request.data
         serialized = AdminUserSerializer(data=user_data)
@@ -77,25 +70,17 @@ def register_admin(request):
             created_user_instance.stripe_id = customer_stripe_response.id
             created_user_instance.save()
             send_otp_via_email(created_user_instance)
-            return Response({'status':STATUS_SUCCESS,
-                             'message':'An email is sent for verification'},
+            return Response(response_template(STATUS_SUCCESS,message='An email is sent for verification'),
                             status=status.HTTP_201_CREATED)
         else:
-            return Response({"status":STATUS_FAILED,
-                             "error":f"{serialized.errors}"},
+            return Response(response_template(STATUS_FAILED,
+                             error=f"{serialized.errors}"),
                             status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(["POST","GET"])
+@api_view(["POST"])
 @permission_classes([IsAuthenticated,IsAdminUser])
 def create_user(request):
     pdb.set_trace()
-    if request.method=="GET":
-        states = [state for state,_ in state_choices]
-        city = [{state:[c[0] for c in city] for state,city in cities}]
-        data = {"states":states,
-                "cities":city}
-        return Response({"status":STATUS_SUCCESS,"data":data},
-                        status=status.HTTP_200_OK)
     if request.method=="POST":
         user_data = request.data
         user_instnace = request.user.extra_user_fields
@@ -113,8 +98,8 @@ def create_user(request):
             return Response({"status":STATUS_SUCCESS,"message":"user is created successfully"},
                             status=status.HTTP_201_CREATED)
         else:   
-            return Response({"status":STATUS_FAILED,
-                             "error":serialized.errors},
+            return Response(response_template(STATUS_FAILED,
+                             error=f'{serialized.errors}'),
                             status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(["POST"])
@@ -126,9 +111,9 @@ def resend_otp(request):
         send_otp_via_email(user)
     except Exception as e:
         logger.exception(f"an error occured : that email is incorrect")
-        return Response({"status":STATUS_FAILED,"error":"user does not exist"},
+        return Response(response_template(STATUS_FAILED,error="user does not exist"),
                         status=status.HTTP_400_BAD_REQUEST)
-    return Response({'status':STATUS_SUCCESS,"message":"otp is successfully sent"},
+    return Response(response_template(STATUS_SUCCESS,message="otp is successfully sent"),
                     status=status.HTTP_200_OK)
 
 
@@ -145,7 +130,7 @@ def verify(request):
     except Exception as e:
         logger.debug(f'Cache keys {cache.keys("*")}')
         logger.exception(f'incorret key')
-        return Response({"status":STATUS_FAILED,"error":"incorrect otp entered"},
+        return Response(response_template(STATUS_FAILED,error="incorrect otp entered"),
                          status=status.HTTP_400_BAD_REQUEST)
     otp_key = "otp_"+str(user_instance.id)
     if otp_key in cache:
@@ -154,13 +139,13 @@ def verify(request):
             user_instance.is_verified=True
             user_instance.save()
             cache.delete(otp_key)
-            return Response({"status":STATUS_SUCCESS,"message":"user is verified"},
+            return Response(response_template(STATUS_SUCCESS,message="user is verified"),
                             status=status.HTTP_200_OK)
         else:
-            return Response({"status":STATUS_FAILED,"error":"incorrect otp"},
+            return Response(response_template(STATUS_FAILED,error="incorrect otp"),
                            status=status.HTTP_400_BAD_REQUEST)
     else:
-        return Response({"status":STATUS_FAILED,"error":"otp is expired"},
+        return Response(response_template(STATUS_FAILED,error="otp is expired"),
                         status=status.HTTP_400_BAD_REQUEST)
     
 @api_view(["POST"])
@@ -180,22 +165,22 @@ def login(request):
             if user is not None and extra_user_fields.is_verified:
                 auth.login(request,user)
                 token = get_tokens_for_user(user)
-                return Response({"status":STATUS_SUCCESS,
-                                 'message':'user logged in successfully',
-                                 "token":token},
-                                content_type='application/json')
+                return Response(response_template(STATUS_SUCCESS,
+                                 message='user logged in successfully',
+                                 token=token),
+                                status=status.HTTP_200_OK)
             else:
-                return Response({'status':STATUS_FAILED,'error':"user not varified", 'error': f"{error}"},
+                return Response(response_template(STATUS_FAILED,error="user not varified"),
                                 status=status.HTTP_403_FORBIDDEN)
         elif username=='admin':
                 auth.login(request,user)
                 token = get_tokens_for_user(user)
-                return Response({"status":STATUS_SUCCESS,
-                                 'message':'user logged in successfully',
-                                 "token":token},
-                                content_type='application/json')                
-    return Response({"status":STATUS_FAILED,
-                     "error":serialized.errors})
+                return Response(response_template(STATUS_SUCCESS,
+                                 message='user logged in successfully',
+                                 token=token),
+                                status=status.HTTP_200_OK)                
+    return Response(response_template(STATUS_FAILED,
+                     error=f'{serialized.errors}'),status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['POST'])
 @permission_classes([IsAdminUser,IsAuthenticated])
@@ -206,38 +191,38 @@ def grant_permission_to_user(request):
         user_id = request.data.get('user_id')
         admin_user = CustomUser.objects.get(user=request.user)
         account = admin_user.account
-        user_set = CustomUser.objects.filter(account=account)
-        user_instance= user_set.get(pk=user_id)
-        permissions = user_instance.permission.all()
+        user_instance = CustomUser.objects.filter(Q(account=account)&Q(pk=user_id)).first()
+        permissions = user_instance.permissions.filter(Q(related_to=related_to))
         if permissions:
-            for permission in permissions:
-                if permission.related_to==related_to:
-                    permission_instance=permission
-            permission_set = permission_instance.permission_set
-            permission_set.update(new_permission_set)
-            get_permission_obj = Permission.objects.get(permission_set=permission_set)
-            user_instance.permission.set([get_permission_obj])
-            user_instance.save()
-            return Response({"status":STATUS_SUCCESS,
-                             "message":"permission granted"},
-                    status=status.HTTP_201_CREATED)
+                permission_set=permissions.permission_set
+                permission_set.update(new_permission_set)
+                get_permission_obj = Permission.objects.get(permission_set=permission_set)
+                user_instance.permission.set([get_permission_obj])
+                user_instance.save()
+                return Response(response_template(STATUS_SUCCESS,
+                                 message="permission granted"),
+                        status=status.HTTP_201_CREATED)
         else:
+            permission_set = {"can_update":False,"can_create":False,"can_delete":False}
+            permission_set.update(new_permission_set)
             permission_instance = Permission.objects.get(permission_set=permission_set,
                                                          related_to=related_to)
-            user_instance.permission.set([permission_instance])
+            user_instance.permissions.add(permission_instance)
             user_instance.save()
-            return Response({"status":STATUS_SUCCESS,
-                             "message":"permission granted"},
+            return Response(response_template(STATUS_SUCCESS,
+                             message="permission granted"),
                     status=status.HTTP_201_CREATED)
     except Permission.DoesNotExist:
-        return Response({"status":STATUS_FAILED,
-                         "errors":"incorrect permission type provided"},
+        return Response(response_template(STATUS_FAILED,
+                         error="incorrect permission type provided"),
                         status=status.HTTP_400_BAD_REQUEST)
     except CustomUser.DoesNotExist:
-        return Response({"status":STATUS_FAILED,
-                         "errors":"incorrect user id provided"},
+        return Response(response_template(STATUS_FAILED,
+                         error="incorrect user id provided"),
                         status=status.HTTP_400_BAD_REQUEST)
-
+@api_view(["PUT"])
+def update_permission_set(request):
+    pass
 
 @api_view(["POST"])
 @permission_classes([IsAdminUser,IsAuthenticated])
@@ -245,25 +230,26 @@ def create_permission_set(request):
     serializer_permission = PermissionSerializer(data=request.data)
     if serializer_permission.is_valid():
         serializer_permission.save()
-        return Response({"status":STATUS_SUCCESS,
-                         "message":"permission set successfully created"},
+        return Response(response_template(STATUS_SUCCESS,
+                         message="permission set successfully created"),
                         status=status.HTTP_201_CREATED)
     else:
-        return Response({"status":STATUS_FAILED,
-                         "errors":serializer_permission.errors},
+        return Response(response_template(STATUS_FAILED,
+                        error=serializer_permission.errors),
                         status=status.HTTP_400_BAD_REQUEST)
     
-@api_view(['POST',"GET"])
+@api_view(['PATCH',"GET"])
 @permission_classes([IsAuthenticated])
 def user_profile(request):
     if request.method=='GET':
         add_on_fields = request.user.extra_user_fields
         add_on_fields_serialize = UpdateCustomUserSerializer(add_on_fields)
-        return Response({"status":STATUS_SUCCESS,
-                         "data":add_on_fields_serialize.data},
+        return Response(response_template(STATUS_SUCCESS,
+                         data=add_on_fields_serialize.data),
                         status=status.HTTP_200_OK)
-    if request.method=="POST":
-        id = request.data.get('id')
+    if request.method=="PATCH":
+        user_instance = CustomUser.objects.get(user=request.user)
+        permission = user_instance.permissions.get()
         nested_user_data= request.data.get("user")
         nested_user_id = nested_user_data.get("id")
         user_instance = CustomUser.objects.get(pk=id)
@@ -272,12 +258,12 @@ def user_profile(request):
                         context={"user_id":nested_user_id})
         if user_serialize.is_valid():
             user_serialize.save()
-            return Response({"status":STATUS_SUCCESS,
-                             "message":"profile is updated successfully"},
+            return Response(response_template(STATUS_SUCCESS,
+                             message="profile is updated successfully"),
                              status=status.HTTP_201_CREATED)
         else:
-            return Response({"status":STATUS_FAILED,
-                             "message":user_serialize.errors},
+            return Response(response_template(STATUS_FAILED,
+                             message=f'{user_serialize.errors}'),
                              status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -294,20 +280,19 @@ def product(request,id=None):
     try:
         user = CustomUser.objects.get(user=request.user)
         account = user.account
-        if id is not None:
+        if id:
             product = Product.objects.get(pk=id,account=account)
-            serialized= ProductSerializer(product).data
-            return Response({"status":STATUS_SUCCESS,"data":serialized},
+            serialized= ProductSerializer(product)
+            return Response(response_template(STATUS_SUCCESS,data=serialized.data),
                             content_type='application/json',
                             status=status.HTTP_200_OK,)
         products = Product.objects.filter(account=account)
-        serialized = ProductSerializer(products,many=True).data
-        return Response({"status":STATUS_SUCCESS,"data":serialized},
-                        content_type='application/json'
-                        ,status=status.HTTP_200_OK)
+        serialized = ProductSerializer(products,many=True)
+        return Response(response_template(STATUS_SUCCESS,data=serialized.data),
+                        status=status.HTTP_200_OK)
     except Product.DoesNotExist:
-        return Response({"status":STATUS_FAILED,
-                         "message":"product does not exist"},
+        return Response(response_template(STATUS_FAILED,
+                         message="product does not exist"),
                         status=status.HTTP_404_NOT_FOUND)
 
 @api_view(["GET"])
@@ -330,13 +315,13 @@ def check_product(request,param):
 
         product_list= SearchedProductListSerializer(products,many=True).data
         if not products:
-            return Response({"status":STATUS_FAILED,"data":[]},
+            return Response(response_template(STATUS_FAILED,data=[]),
                             status=status.HTTP_404_NOT_FOUND)
         else:
-            return Response({"status":STATUS_SUCCESS,"data":product_list},
+            return Response(response_template(STATUS_SUCCESS,data=product_list),
                             status=status.HTTP_200_OK)
     else:
-        return Response({"status":STATUS_FAILED,"message":"not available"},
+        return Response(response_template(STATUS_FAILED,message="not available"),
                          status=status.HTTP_404_NOT_FOUND)
 
 @api_view(["PATCH"])
@@ -355,31 +340,31 @@ def update_stock(request):
             permission = permission_instance.permission_set.get('can_create')   
         except:
             logger.exception(f"{request.user.username} does not have permissions")
-            return Response({"status":STATUS_FAILED,
-                             "error":"user do not have permission to update"},
+            return Response(response_template(STATUS_FAILED,
+                             error="user do not have permission to update"),
                             status=status.HTTP_403_FORBIDDEN)
         if not permission:
-            return Response({"status":STATUS_FAILED,
-                             "error":"user do not have permission to update"},
+            return Response(response_template(STATUS_FAILED,
+                             error="user do not have permission to update"),
                             status=status.HTTP_403_FORBIDDEN)
     product_id = request.data.get('id')
     try:
         product = Product.objects.get(pk=product_id)
     except Product.DoesNotExist:
         logger.exception(f"product {product_id} does not exist in product table")
-        return Response({"status":STATUS_FAILED,
-                         "message":"product not found"},
+        return Response(response_template(STATUS_FAILED,
+                         message="product not found"),
                         status=status.HTTP_404_NOT_FOUND)
     serialized = ProductSerializer(product,data=request.data,
                                    partial=True)
     if serialized.is_valid():
         serialized.save()
-        return Response({"status":STATUS_SUCCESS,
-                         "message": "product is updated"},
+        return Response(response_template(STATUS_SUCCESS,
+                         message="product is updated"),
                         status=status.HTTP_200_OK)
     else:
-        return Response({"status":STATUS_FAILED,
-                         "message":serialized.errors},
+        return Response(response_template(STATUS_FAILED,
+                         message=f'{serialized.errrs}'),
                         status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(["POST"])
@@ -394,12 +379,12 @@ def add_product(request):
                     permission_instance = permission
             permission = permission_instance.permission_set.get('can_create')
         except:
-            return Response({"status":STATUS_FAILED,
-                             "error":"user do not have permission to add product"},
+            return Response(response_template(STATUS_FAILED,
+                             error="user do not have permission to add product"),
                             status=status.HTTP_403_FORBIDDEN)
         if not permission:
-            return Response({"status":STATUS_FAILED,
-                             "error":"user do not have permission to product"},
+            return Response(response_template(STATUS_FAILED,
+                             error="user do not have permission to product"),
                             status=status.HTTP_403_FORBIDDEN)
 
     user_instance = CustomUser.objects.get(user=request.user)
@@ -490,12 +475,12 @@ def add_product(request):
         collector_res = requests.post(url=url,json=collector_payload,headers=headers)
         collector_id = collector_res.json().get("id")
         Survey.objects.create(survey_id=survey_id,collector_id=collector_id,product=product)
-        return Response({"status":STATUS_SUCCESS,
-                         "message":"product added successfully"},
+        return Response(response_template(STATUS_SUCCESS,
+                         message="product added successfully"),
                         status=status.HTTP_201_CREATED)
     else:
-        return Response({"status":STATUS_FAILED,
-                         "error":serialize_product_data.errors},
+        return Response(response_template(STATUS_FAILED,
+                         error=f'{serialize_product_data.errors}'),
                         status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -511,17 +496,17 @@ def make_purchase(request, id):
             product = Product.objects.get(pk=product_id,account=account)
         except Product.DoesNotExist:
             logger.exception(f"{product_id} is not associated with {account.name}")
-            return Response({"status":STATUS_FAILED,
-                             "message":"product not found"},
+            return Response(response_template(STATUS_FAILED,
+                             message="product not found"),
                             status=status.HTTP_404_NOT_FOUND)
         quantity = request.data.get("quantity")
         if product.quantity==0:
-            return Response({"status":STATUS_FAILED,
-                             "message":f"Product is out of stock"},
+            return Response(response_template(STATUS_FAILED,
+                             message=f"Product is out of stock"),
                             status=status.HTTP_400_BAD_REQUEST)
         elif not product.quantity>=quantity:
-            return Response({"status":STATUS_FAILED,
-                             "message":f"Only {product.quantity} is in stock"},
+            return Response(response_template(STATUS_FAILED,
+                             message=f"Only {product.quantity} is in stock"),
                             status=status.HTTP_400_BAD_REQUEST)
         price = product.actual_price*quantity
         discounted_price = product.discounted_price*quantity
@@ -558,7 +543,7 @@ def make_purchase(request, id):
                     "total amount":discounted_price,
                     "message":f"you have saved {discount} on this order"}
             
-        return Response({"status":STATUS_SUCCESS,"url":payment_url},
+        return Response(response_template(STATUS_SUCCESS,url=payment_url),
                          status=status.HTTP_200_OK)
 
 @api_view(["GET"])
@@ -580,8 +565,8 @@ def payment_success(request,session_id):
         user_instance = CustomUser.objects.get(id=session.metadata.get('user_id'))
         PaymentLog.objects.create(amount=total_amount,customer_stripe_id=session.customer,
                                 user=user_instance,status=STATUS_SUCCESS,product=product)
-        return Response({"status":STATUS_SUCCESS,
-                     "message":f"your payment of {total_amount} is successfully done"},
+        return Response(response_template(STATUS_SUCCESS,
+                     message=f"your payment of {total_amount} is successfully done"),
                     status=status.HTTP_200_OK)
 
 @api_view(["GET"])
@@ -593,8 +578,8 @@ def payment_failed(request,session_id):
         user_instance = CustomUser.objects.get(id=session.metadata.get('user_id'))
         PaymentLog.objects.create(amount=total_amount,customer_stripe_id=session.customer,
                                 user=user_instance,status=STATUS_FAILED,product=product)
-        return Response({"status":STATUS_FAILED,
-                         "message":f"payment of {total_amount} was unsuccessfull"},
+        return Response(response_template(STATUS_FAILED,
+                         message=f"payment of {total_amount} was unsuccessfull"),
                         status=status.HTTP_400_BAD_REQUEST)
     
 @api_view(["POST","GET"])
@@ -612,7 +597,7 @@ def product_feedback(request,product_id):
         try:
             product_log = PaymentLog.objects.filter(product=product,user=user).last()
         except:
-            return Response({"status":STATUS_FAILED,'error':"product needs to be purchased first in order to review it"},
+            return Response(response_template(STATUS_FAILED,error="product needs to be purchased first in order to review it"),
                             status=status.HTTP_400_BAD_REQUEST)
         survey_obj = Survey.objects.get(product=product)
         collector_id = survey_obj.collector_id
@@ -620,7 +605,7 @@ def product_feedback(request,product_id):
         url = SM_API_BASE + endpoint_url
         collector = requests.get(url=url,headers=headers)
         collector_url = collector.json().get('url')
-        return Response({"status":STATUS_SUCCESS,'url':collector_url},
+        return Response(response_template(STATUS_SUCCESS,url=collector_url),
                     status=status.HTTP_200_OK)
     elif request.method=="GET":
         user = CustomUser.objects.get(user=request.user)
@@ -645,13 +630,13 @@ def product_feedback(request,product_id):
                 return total_response_count/total_responses
             response_dict["average_response"] = average_res(survey_ans_dict)
             response_dict["total_response"] = total_responses
-            return Response({"status":STATUS_SUCCESS,"data":response_dict},
+            return Response(response_template(STATUS_SUCCESS,data=response_dict),
                             status=status.HTTP_200_OK)
         elif not request.user.is_superuser:
-            return Response({"status":STATUS_FAILED,"error":"user does not have permission"},
+            return Response(response_template(STATUS_FAILED,error="user does not have permission"),
                             status=status.HTTP_403_FORBIDDEN)
         else:
-            return Response({"status":STATUS_FAILED,"url":None},
+            return Response(response_template(STATUS_FAILED,url=None),
                             status=status.HTTP_404_NOT_FOUND)
 
 @api_view(["GET"])
@@ -661,7 +646,7 @@ def users(request):
     account = user.related_account
     users = CustomUser.objects.filter(account=account)
     serialize_instances = UpdateCustomUserSerializer(users,many=True)
-    return Response({'status':STATUS_SUCCESS,"data":serialize_instances.data},
+    return Response(response_template(STATUS_SUCCESS,data=serialize_instances.data),
                     status=status.HTTP_200_OK)
 
 
@@ -674,7 +659,7 @@ def payment_history(request):
     serialize_payments_log = PaymentLogSerializer(payment_history_instances,
                                                   many=True)
     payment_history_list = serialize_payments_log.data
-    return Response({"status":STATUS_SUCCESS,"data":payment_history_list},
+    return Response(response_template(STATUS_SUCCESS,data=payment_history_list),
                     status=status.HTTP_200_OK)
 
 

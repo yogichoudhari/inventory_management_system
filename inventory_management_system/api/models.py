@@ -82,12 +82,11 @@ class User(models.Model):
     city = models.CharField(choices=cities,max_length=50)
     state = models.CharField(choices=state_choices, max_length=35)
     account = models.ForeignKey('Account',on_delete=models.SET_NULL,related_name='users',null=True)
-    permission = models.ManyToManyField(Permission)
+    permissions = models.ManyToManyField(Permission,related_name="permission")
     stripe_id = models.CharField(max_length=55,null=True)
     is_verified = models.BooleanField(default=False)
     def __str__(self):
         return self.user.username
-
 @receiver(post_delete,sender=User)
 def delete_builtin_user(sender,instance,**kwargs):
     instance.user.delete()

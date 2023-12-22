@@ -46,3 +46,15 @@ def get_tokens_for_user(user):
 
 
 
+
+def response_template(status,**response_obj):
+    response_obj = {k:v for k,v in response_obj.items()}
+    return {
+        'status':status,
+        'response':response_obj    
+    }
+
+
+
+
+

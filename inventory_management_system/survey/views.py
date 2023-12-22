@@ -94,9 +94,3 @@ def surveys(request):
 		return Response({"status":"success","message":"your survey successfully created"},
 				  status=status.HTTP_200_OK)
 
-
-
-@api_view(["POST"])
-@permission_classes([IsAuthenticated])
-def response(request):
-	pass

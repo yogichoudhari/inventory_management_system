@@ -1,8 +1,8 @@
 from django.urls import path
 from . import views
 urlpatterns = [
-    path('product/',views.product),
-    path('product/<int:id>',views.product),
+    path('products/',views.product),
+    path('products/<int:id>',views.product),
     path('register/', views.register_admin),
     path('create-user/', views.create_user),
     path('verify/', views.verify),

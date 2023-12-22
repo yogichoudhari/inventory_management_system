@@ -25,8 +25,18 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG")
 
-ALLOWED_HOSTS = []
-CORS_ALLOWED_ORIGINS = ['*']
+ALLOWED_HOSTS = ['*']
+CORS_ALLOWED_ORIGINS = ['https://editor.swagger.io']
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ORIGIN_WHITELIST = [
+  'https://editor.swagger.io'
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://editor.swagger.io'
+]
+
 
 # Application definition
 
@@ -40,8 +50,8 @@ INSTALLED_APPS = [
     'rest_framework',
     "rest_framework_simplejwt",
     'api',
-    'survey'
-
+    'survey',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [

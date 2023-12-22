@@ -3,13 +3,8 @@ from .models import Product, User, Roll, Account, Permission, PaymentLog, Survey
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
     list_display=["id", "user", "phone", "roll", "state", "city",
-                   "account", "display_permissions","stripe_id",
+                   "account","stripe_id",
                    "is_verified"]
-    def display_permissions(self, obj):
-        return ', '.join([permission.permission_name+"_"+permission.related_to.lower() 
-                          for permission in obj.permission.all()])
-    
-    display_permissions.short_description = 'Permissions'
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['id', 'category', "brand", "title", "actual_price",
@@ -33,3 +28,4 @@ class PaymentLogAdmin(admin.ModelAdmin):
 @admin.register(Survey)
 class PaymentLogAdmin(admin.ModelAdmin):
     list_display = ['id','survey_id', 'collector_id', 'product']
+
