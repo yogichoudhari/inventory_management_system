@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 from decouple import config
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +25,17 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+CORS_ALLOWED_ORIGINS = ['https://editor.swagger.io']
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ORIGIN_WHITELIST = [
+  'https://editor.swagger.io'
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://editor.swagger.io'
+]
 
 
 # Application definition
@@ -39,10 +49,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     "rest_framework_simplejwt",
-    'api'
+    'api',
+    'survey',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -57,7 +70,7 @@ ROOT_URLCONF = 'inventory_management_system.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -112,18 +125,25 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
 USE_TZ = True
 
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
 
-
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://localhost:6379/1",
+    }
+}
 #  stripe payment keys
 
-STRIPE_SECRET_KEY = 'sk_test_51OFKyHSCy3EZVvJQM3ZewhLIwrQ5vWeVsk8MB2Pp08BR3HbiNCO9r800eotSNUxTvQxGWfkzUxjNB6rXBEe2Eteq00Z9Gwyzhr'
-STRIPE_PUBLISHABLE_KEY = "pk_test_51OFKyHSCy3EZVvJQNvFGg8lkWPKkZxJvh20F9dpNJkC4dZGhYWnKeSM8W0flAT7JVP7gYXM9qt5zYm6wvX0ghXhd003k2wm43i"
+STRIPE_SECRET_KEY = config("STRIPE_SECRET_KEY")
+STRIPE_PUBLISHABLE_KEY = config("STRIPE_PUBLISHABLE_KEY")
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -186,3 +206,14 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+#Email Backend
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'yogigurjar73542@gmail.com'
+EMAIL_HOST_PASSWORD = 'yfxbfiytannmvhzf'
+
+

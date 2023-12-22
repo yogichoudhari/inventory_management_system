@@ -1,7 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User as BuiltInUser
 from django.core.exceptions import ValidationError
 from indian_cities.dj_city import cities
+from django.dispatch import receiver
+from django.db.models.signals import post_delete
+from django.utils import timezone
+import pdb
 state_choices = (("Andhra Pradesh","Andhra Pradesh"),
                  ("Arunachal Pradesh ","Arunachal Pradesh "),
                  ("Assam","Assam"),
@@ -62,16 +66,42 @@ def phone_validator(value):
     except ValueError:
         raise ValidationError("number should be numerical")
     
+
+class Permission(models.Model):
+    permission_name = models.CharField(max_length=80,null=False)
+    permission_set = models.JSONField(null=False)
+    related_to = models.CharField(null=False)
+    def __str__(self):
+        permission_set  = {k:v for k,v in self.permission_set.items() if v==True}
+        return str(permission_set) + "_" +str(self.related_to)
+        
 class User(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="extra_user_fields")
+    user = models.OneToOneField(BuiltInUser, on_delete=models.CASCADE, related_name="extra_user_fields")
     roll = models.ForeignKey(Roll,on_delete=models.CASCADE)
     phone = models.CharField(validators=[phone_validator],max_length=10,null=False)
     city = models.CharField(choices=cities,max_length=50)
     state = models.CharField(choices=state_choices, max_length=35)
-    managed_by = models.ForeignKey('self',on_delete=models.SET_NULL, related_name="created_user",null=True,default=None)
-
+    account = models.ForeignKey('Account',on_delete=models.SET_NULL,related_name='users',null=True)
+    permissions = models.ManyToManyField(Permission,related_name="permission")
+    stripe_id = models.CharField(max_length=55,null=True)
+    is_verified = models.BooleanField(default=False)
     def __str__(self):
         return self.user.username
+@receiver(post_delete,sender=User)
+def delete_builtin_user(sender,instance,**kwargs):
+    instance.user.delete()
+class Account(models.Model):
+    admin = models.OneToOneField(User,on_delete=models.CASCADE,related_name='related_account')
+    name = models.CharField(max_length=33,null=False,blank=False)
+    logo = models.BinaryField(null=True,blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(null=True,blank=True)
+    def save(self,*args,**kwargs):
+        if self.created_at:
+            self.updated_at = timezone.now()
+        super(Account,self).save(*args,**kwargs)
+    def __str__(self):
+        return self.name
 
 class Product(models.Model):
     category = models.CharField(max_length=100,null=False,blank=False)
@@ -80,6 +110,8 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(default=0,null=False,blank=False)
     actual_price = models.PositiveIntegerField(default=99,null=False,blank=False)
     discounted_price = models.PositiveIntegerField(default=99,null=False,blank=False)
+    account = models.ForeignKey(Account,on_delete=models.CASCADE)
+    created_by = models.ForeignKey(User,on_delete=models.CASCADE,null=False)
 
     def save(self,*args,**kwargs):
         self.category = self.category.title()
@@ -96,3 +128,21 @@ class Product(models.Model):
         else:
             return "out of stock"
 
+
+class PaymentLog(models.Model):
+    amount = models.PositiveIntegerField()
+    customer_stripe_id = models.CharField(max_length=200)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    payment_status_choices = [
+        ('success','success'),
+        ('failed', 'failed')
+    ]
+    status = models.CharField(choices=payment_status_choices)
+    created_at = models.DateTimeField(auto_now_add=True)
+    product = models.ForeignKey(Product,on_delete=models.SET_NULL,null=True)
+
+
+class Survey(models.Model):
+    survey_id = models.PositiveIntegerField()
+    collector_id = models.PositiveIntegerField()
+    product = models.OneToOneField(Product,on_delete=models.CASCADE)
